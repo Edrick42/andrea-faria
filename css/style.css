@@ -1,0 +1,139 @@
+:root {
+  --azul-principal: #0c667b;
+  --azul-medio: #79ccda;
+  --azul-claro: #c6f6fa;
+  --vinho-escuro: #54303b;
+  --roxo-medio: #7b4f60;
+  --rosa-medio: #f8c6cc;
+  --rosa-claro: #fce9ec;
+  --preto: #000;
+  --branco: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  color: var(--preto);
+  background-color: var(--branco);
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--branco);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--vinho-escuro);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--vinho-escuro);
+  font-weight: 500;
+}
+
+.call-btn {
+  background-color: var(--azul-principal);
+  color: var(--branco);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.hero {
+  height: 100vh;
+  background: url('../assets/bg.jpg') center center / cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: var(--branco);
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.subtitle,
+.pt,
+.pt-sub {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  margin: 0.5rem 0;
+}
+
+.hero-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn-outline,
+.btn-filled {
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-outline {
+  border: 2px solid var(--branco);
+  color: var(--branco);
+}
+
+.btn-outline:hover {
+  background: var(--branco);
+  color: var(--vinho-escuro);
+}
+
+.btn-filled {
+  background: var(--vinho-escuro);
+  color: var(--branco);
+}
+
+.btn-filled:hover {
+  background: var(--roxo-medio);
+}
