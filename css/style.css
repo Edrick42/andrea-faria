@@ -5,72 +5,158 @@
   font-weight: 100;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Manier';
   src: url('../assets/fonts/Manier-ThinItalic.otf') format('opentype');
   font-weight: 100;
   font-style: italic;
 }
+
 @font-face {
   font-family: 'Manier';
   src: url('../assets/fonts/Manier-Light.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Manier';
   src: url('../assets/fonts/Manier-LightItalic.otf') format('opentype');
   font-weight: 300;
   font-style: italic;
 }
+
 @font-face {
   font-family: 'Manier';
   src: url('../assets/fonts/Manier-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Manier';
   src: url('../assets/fonts/Manier-RegularItalic.otf') format('opentype');
   font-weight: 400;
   font-style: italic;
 }
+
 @font-face {
   font-family: 'Manier';
   src: url('../assets/fonts/Manier-Medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Manier';
   src: url('../assets/fonts/Manier-MediumItalic.otf') format('opentype');
   font-weight: 500;
   font-style: italic;
 }
+
 @font-face {
   font-family: 'Manier';
   src: url('../assets/fonts/Manier-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Manier';
   src: url('../assets/fonts/Manier-BoldItalic.otf') format('opentype');
   font-weight: 700;
   font-style: italic;
 }
+
 @font-face {
   font-family: 'Manier';
   src: url('../assets/fonts/Manier-Heavy.otf') format('opentype');
   font-weight: 900;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Manier';
   src: url('../assets/fonts/Manier-HeavyItalic.otf') format('opentype');
   font-weight: 900;
   font-style: italic;
 }
+
+/* Raleway – todos os pesos */
+
+/* 100 */
+.raleway-landing-100 {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* 200 */
+.raleway-landing-200 {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* 300 */
+.raleway-landing-300 {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* 400 */
+.raleway-landing-400 {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* 500 */
+.raleway-landing-500 {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* 600 */
+.raleway-landing-600 {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* 700 */
+.raleway-landing-700 {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* 800 */
+.raleway-landing-800 {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* 900 */
+.raleway-landing-900 {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
 
 /* MOBILE FIRST! */
 :root {
@@ -83,12 +169,51 @@
   --rosa-claro: #fce9ec;
   --preto: #000;
   --branco: #fff;
+
+  /* Layout tokens */
+  --container-max: 1200px;
+  --radius-lg: 36px;
+  --radius-md: 18px;
+
+  /* Escala de espaçamento baseada em 8px */
+  --space-1: 0.5rem;
+  /* 8px */
+  --space-2: 1rem;
+  /* 16px */
+  --space-3: 1.5rem;
+  /* 24px */
+  --space-4: 2rem;
+  /* 32px */
+  --space-5: 3rem;
+  /* 48px */
+
+  /* Font-family principal e secundária */
+  --font-primary: 'Manier', 'Raleway', Arial, sans-serif;
+  --font-secondary: 'Raleway', Arial, sans-serif;
+
+  /* Pesos comuns */
+  --font-thin: 100;
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+  --font-heavy: 900;
+
+  /* Tipografia fluida */
+  --font-size-base: clamp(1rem, 1vw + 0.5rem, 1.125rem);
+  --font-size-lg: clamp(1.25rem, 1.5vw + 0.5rem, 1.75rem);
+  --font-size-xl: clamp(2rem, 3vw + 1rem, 3rem);
+  --font-size-xxl: clamp(4rem, 4vw + 1rem, 4rem);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
 }
 
 body {
@@ -99,22 +224,25 @@ body {
 }
 
 .logo,
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Manier', 'Playfair Display', serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-regular), serif;
 }
 
 header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0.5rem 1rem;
-  background: var(--preto);
-  position: fixed;
-  top: 0;
+  padding: var(--space-2) var(--space-2);
+  position: relative;
+  top: 60px;
   left: 0;
   width: 100vw;
   z-index: 1000;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -134,7 +262,7 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: var(--vinho-escuro);
+  color: var(--branco);
   font-weight: 500;
 }
 
@@ -149,7 +277,7 @@ nav a:hover {
   padding: 0.5rem 1rem;
   border-radius: 20px;
   cursor: pointer;
-  transition: 
+  transition:
     background-color 0.3s ease,
     color 0.3s ease,
     border-color 0.3s ease;
@@ -169,13 +297,14 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2rem 0;
 }
 
 .overlay {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.2);
 }
 
@@ -194,7 +323,7 @@ nav a:hover {
   margin-bottom: 1rem;
 }
 
-.pt {
+.description {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
   margin: 0.5rem 0;
@@ -212,10 +341,10 @@ nav a:hover {
 .btn-purple {
   padding: 0.5rem 1rem;
   border-radius: 30px;
-  font-weight: 500;
   text-decoration: none;
   transition: all 0.3s ease;
   font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .btn-white {
@@ -253,6 +382,7 @@ nav a:hover {
   background: var(--branco);
   text-align: center;
 }
+
 .clients-carousel {
   display: flex;
   align-items: center;
@@ -261,6 +391,7 @@ nav a:hover {
   max-width: 100vw;
   overflow: hidden;
 }
+
 .carousel-track {
   display: flex;
   gap: 2rem;
@@ -268,6 +399,7 @@ nav a:hover {
   scroll-behavior: smooth;
   padding: 2rem 0;
 }
+
 .client-card {
   position: relative;
   overflow: hidden;
@@ -276,15 +408,17 @@ nav a:hover {
   width: 100%;
   height: 500px;
   background: var(--azul-claro);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
   cursor: pointer;
 }
+
 .client-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
+
 .client-info {
   position: absolute;
   left: 0;
@@ -293,21 +427,24 @@ nav a:hover {
   padding: 2rem 1rem 1rem 1rem;
   box-sizing: border-box;
 }
+
 .client-info h3 {
   font-family: 'Manier', serif;
   font-size: 1.2rem;
   color: #fff;
   margin: 0 0 0.5rem 0;
   text-align: left;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
+
 .client-info p {
   font-size: 0.95rem;
   color: #fff;
   margin: 0;
   text-align: left;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
+
 .show-less-btn {
   background: none;
   border: none;
@@ -318,14 +455,17 @@ nav a:hover {
   transition: color 0.2s;
   display: none;
 }
+
 .show-less-btn:hover {
   color: var(--vinho-escuro);
 }
+
 .clients-section {
   padding: 4rem 0 2rem 0;
   background: var(--branco);
   text-align: center;
 }
+
 .clients-section h2 {
   font-family: 'Manier', 'Playfair Display', serif;
   font-size: 2.2rem;
@@ -333,13 +473,16 @@ nav a:hover {
   color: #fff;
   letter-spacing: 1px;
 }
+
 .clients-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem; /* gap de 10px entre colunas */
+  gap: 2rem;
+  /* gap de 10px entre colunas */
   justify-items: stretch;
   margin: 2rem 2rem;
 }
+
 .client-card {
   position: relative;
   overflow: hidden;
@@ -348,41 +491,49 @@ nav a:hover {
   width: 100%;
   height: 500px;
   background: var(--azul-claro);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
   cursor: pointer;
 }
+
 .client-card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
   display: block;
 }
+
 .client-card h3 {
   font-family: 'Manier', serif;
   font-size: 1.2rem;
   margin: 1rem 1rem 0.5rem 1rem;
   text-align: left;
 }
+
 .client-card p {
   font-size: 0.95rem;
   color: var(--vinho-escuro);
   margin: 0 1rem 1rem 1rem;
   text-align: left;
 }
+
 .hidden {
   display: none !important;
 }
+
 /* TABLET */
 @media (min-width: 600px) {
   .logo {
     font-size: 1.5rem;
   }
+
   .hero h1 {
-    font-size: 1.6rem;
+    font-size: var(--font-size-lg);
   }
+
   .hero-content {
     padding: 1rem 0.5rem;
   }
+
   .btn-outline,
   .btn-filled {
     font-size: 1rem;
@@ -392,55 +543,147 @@ nav a:hover {
 
 /* DESKTOP */
 @media (min-width: 1024px) {
+  .top-bar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    width: 100%;
+    height: 60px;
+    background-color: var(--preto);
+    color: var(--branco);
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    z-index: 1001;
+    padding: 16px;
+  }
+
+  .top-bar-left {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .top-bar-left h5 {
+    margin: 0;
+  }
+
+  .top-bar-center {
+    flex: 1;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .top-bar-rigth {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .top-bar-rigth .call-btn {
+    border: 2px solid var(--branco);
+    color: var(--branco);
+    background-color: var(--preto);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease,
+      border-color 0.3s ease;
+  }
+
+  .top-bar-rigth .call-btn:hover {
+    border-color: var(--branco);
+    background-color: var(--branco);
+    color: var(--preto);
+  }
+
   header {
     flex-direction: row;
     align-items: center;
-    justify-content: space-between; 
-    padding: 2rem 2rem;
+    justify-content: space-between;
   }
+
   .logo {
     margin-bottom: 0;
     font-size: 1rem;
-  }  
+  }
+
   .logo img {
-    height: 18px; /* diminui o tamanho do logo no desktop */
+    height: 18px;
+    /* diminui o tamanho do logo no desktop */
     width: auto;
   }
+
   nav ul {
-    flex-direction: row;
-    gap: 1rem; /* diminui o espaçamento entre os itens */
-    align-items: center;
     width: auto;
+    align-items: center;
+    flex-direction: row;
+    gap: var(--space-2);
+    font-family: var(--font-secondary);
   }
+
+  nav ul li {
+    color: var(--branco);
+  }
+
   nav a {
-    font-size: 0.95rem; /* diminui o tamanho da fonte dos links */
-    padding: 0.25rem 0.5rem; /* diminui o padding dos links */
+    font-size: 0.95rem;
+    /* diminui o tamanho da fonte dos links */
+    padding: 0.25rem 0.5rem;
+    /* diminui o padding dos links */
   }
+
   .call-btn {
-    font-size: 0.95rem; /* diminui o tamanho da fonte do botão */
-    padding: 0.4rem 0.8rem; /* diminui o padding do botão */
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem;
   }
+
   .hero {
-    height: 100vh;
-    min-height: unset;
-    padding: 0;
+    position: relative;
+    height: 110vh;
+    margin-top: -10vh;
   }
+
   .hero-content {
     max-width: none;
-    padding: 20rem 2rem 2rem 2rem; /* aumenta o padding-top para descer o conteúdo */
+    padding: 20rem 2rem 2rem 2rem;
+    /* aumenta o padding-top para descer o conteúdo */
   }
+
   .hero h1 {
-    font-size: 4rem; /* deixa o h1 maior */
-    margin-bottom: 1rem;
+    margin: 0 auto;
+    width: 90%;
+    font-weight: 300;
+    line-height: 1.2;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-3);
   }
-  .pt {
-    font-size: 1.1rem; /* deixa o texto abaixo menor */
+
+  .hero-content .description {
+    margin: 0 auto;
+    width: 60%;
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-5);
   }
+
   .hero-buttons {
     flex-direction: row;
     gap: 1rem;
-    align-items: center; /* Garante alinhamento vertical central */
+    align-items: center;
+    /* Garante alinhamento vertical central */
   }
+
   .btn-divider {
     margin: 0 0.5rem;
     display: flex;
@@ -453,6 +696,7 @@ nav a:hover {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media (max-width: 600px) {
   .clients-grid {
     grid-template-columns: 1fr;
@@ -504,6 +748,7 @@ nav a:hover {
     gap: 2rem;
     text-align: left;
   }
+
   .what-section {
     padding: 3rem 0 2rem 0;
   }
@@ -558,11 +803,10 @@ nav a:hover {
 }
 
 .service-details ul {
-  margin: 1rem 0 0 0;
-  padding-left: 1.2rem;
-  color: var(--vinho-escuro);
-  font-family: 'Raleway', sans-serif;
-  font-size: 1.05rem;
+  margin: var(--space-2) 0 0 0;
+  color: var(--branco);
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-base);
 }
 
 .service-details li {
@@ -577,8 +821,15 @@ nav a:hover {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px);}
-  to { opacity: 1; transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* OUR CLIENTS SECTION */
