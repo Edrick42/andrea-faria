@@ -927,6 +927,37 @@ nav a:hover {
     padding: 0 2rem;
   }
 
+  .client-logo-container {
+    width: 160px;
+    height: 140px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+  }
+
+  .client-logo-container:hover {
+    background: #e8e8e8;
+    transform: scale(1.05);
+  }
+
+  .client-logo-container img {
+    max-width: 120px;
+    max-height: 100px;
+    filter: grayscale(100%);
+    opacity: 0.85;
+    object-fit: contain;
+    transition: all 0.3s ease;
+  }
+
+  .client-logo-container:hover img {
+    opacity: 1;
+    filter: grayscale(0);
+  }
+
   /* footer area */
   .our-clients-footer {
     background-color: var(--cinza);
