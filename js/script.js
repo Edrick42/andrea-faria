@@ -25,25 +25,6 @@ document.querySelectorAll('.client-card').forEach(card => {
   });
 });
 
-const showMoreBtn = document.getElementById('showMoreBtn');
-const showLessBtn = document.getElementById('showLessBtn');
-
-showMoreBtn.addEventListener('click', function() {
-  document.querySelectorAll('.client-card.hidden').forEach(card => {
-    card.classList.remove('hidden');
-  });
-  showMoreBtn.style.display = 'none';
-  showLessBtn.style.display = 'inline-block';
-});
-
-showLessBtn.addEventListener('click', function() {
-  document.querySelectorAll('.client-card').forEach((card, idx) => {
-    if (idx >= 6) card.classList.add('hidden');
-  });
-  showLessBtn.style.display = 'none';
-  showMoreBtn.style.display = 'inline-block';
-});
-
 document.querySelectorAll('.service-item').forEach(item => {
   item.addEventListener('click', function () {
     this.classList.toggle('active');
@@ -58,3 +39,30 @@ document.querySelectorAll('.service-item').forEach(item => {
     }
   });
 });
+
+(function () {
+  const topBar = document.querySelector('.top-bar');
+  if (!topBar) return;
+
+  const THRESHOLD = 70; // px - ajustar conforme necessário
+
+  function onScroll() {
+    if (window.scrollY > THRESHOLD) {
+      topBar.classList.add('scrolled');
+    } else {
+      topBar.classList.remove('scrolled');
+    }
+  }
+
+  // inicializa estado (se a página for carregada já scrolled)
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // opcional: clique no hamburger para abrir nav móvel (caso precise)
+  const hamb = document.querySelector('.top-bar-hamburger');
+  if (hamb) {
+    hamb.addEventListener('click', () => {
+      document.body.classList.toggle('nav-open'); // trate nav-open no CSS/JS se desejar
+    });
+  }
+})();

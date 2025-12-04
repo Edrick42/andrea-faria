@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Andréa Faria Marketing</title>
+  <link rel="icon" type="image/x-icon" href="./assets/favicon/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,14 +17,19 @@
 <body>
   <div class="top-bar">
     <div class="top-bar-left">
+      <img class="top-bar-mini-logo" src="./assets/logos/Andrea-Faria-Marketing-Logo-White.svg" alt="Andréa Faria"
+        aria-hidden="true">
       <h5>Pronto para construir uma marca desejada e memorável?</h5>
     </div>
-    <div class="top-bar-rigth">
-      <a href="#about" class="btn btn-white">Vamos Conversar</a>
+    <div class="top-bar-right">
+      <button class="top-bar-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+      <a href="#about" class="btn btn-white desktop">Vamos Conversar</a>
     </div>
   </div>
 
-  <header>
+  <header class="desktop">
     <div class="logo">
       <img src="assets/logos/Andrea-Faria-Marketing-Logo-Tipo-White.svg" alt="Andréa Faria Logo" height="40">
     </div>
@@ -52,8 +58,8 @@
       </p>
       <div class="hero-buttons">
         <a href="#about" class="btn btn-white">Agendar Reunião</a>
-        <span class="btn-divider"></span>
-        <a href="#what" class="btn btn-purple">Ver Casos</a>
+        <!--span class="btn-divider"></span>
+        <a href="#what" class="btn btn-purple">Ver Casos</a-->
       </div>
     </div>
   </section>
@@ -68,62 +74,124 @@
 
   <section class="servicos">
     <h2>O que fazemos</h2>
-    <div class="servicos-row">
-      <div class="servicos-row-left">
 
+    <div class="servicos-row desktop">
+      <div class="servicos-row-left">
+        <img src="./assets/images/andrea-faria-audio-visual.jpg" alt="">
       </div>
-      <div class="servicos-row-rigth">
+      <div class="servicos-row-right">
         <h5>AUDIOVISUAL</h5>
         <p>Conteúdos que elevam percepção e geram desejo.</p>
       </div>
     </div>
 
-    <div class="servicos-row">
+    <div class="servicos-row desktop">
       <div class="servicos-row-left">
         <h5>CRIAÇÃO DE MARCA</h5>
         <p>Identidades que diferenciam, posicionam e marcam.</p>
       </div>
-      <div class="servicos-row-rigth">
-
+      <div class="servicos-row-right">
+        <img src="./assets/images/andrea-faria-criacao-de-marca.jpg" alt="">
       </div>
     </div>
 
-    <div class="servicos-row">
+    <div class="servicos-row desktop">
       <div class="servicos-row-left">
-
+        <img src="./assets/images/andrea-faria-web-design.jpg" alt="">
       </div>
-      <div class="servicos-row-rigth">
+      <div class="servicos-row-right">
         <h5>WEBSITE</h5>
         <p>Sites que impressionam, convertem e fortalecem a presença digital.</p>
       </div>
     </div>
 
-    <div class="servicos-row">
+    <div class="servicos-row desktop">
       <div class="servicos-row-left">
         <h5>SOCIAL MEDIA</h5>
         <p>Estratégias que atraem, engajam e constroem autoridade.</p>
       </div>
-      <div class="servicos-row-rigth">
-
+      <div class="servicos-row-right">
+        <img src="./assets/images/andrea-faria-social-media.jpg" alt="">
       </div>
     </div>
 
-    <div class="servicos-row">
+    <div class="servicos-row desktop">
       <div class="servicos-row-left">
-
+        <img src="./assets/images/andrea-faria-marketing-de-performance.jpg" alt="">
       </div>
-      <div class="servicos-row-rigth">
+      <div class="servicos-row-right">
         <h5>MARKETING DE PERFORMANCE</h5>
         <p>Campanhas que alcançam as pessoas certas e geram rentabilidade.</p>
       </div>
     </div>
 
-    <div class="servicos-row">
+    <div class="servicos-row desktop">
       <div class="servicos-row-left">
         <h5>CONSULTORIA DE MARKETING & NEGÓCIOS</h5>
         <p>Direção estratégica para crescer com clareza e consistência.</p>
       </div>
-      <div class="servicos-row-rigth">
+      <div class="servicos-row-right">
+        <img src="./assets/images/andrea-faria-consultoria.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="servicos-row mobile">
+      <div class="servicos-row-left">
+        <h5>AUDIOVISUAL</h5>
+        <p>Conteúdos que elevam percepção e geram desejo.</p>
+      </div>
+      <div class="servicos-row-right">
+        <img src="./assets/images/andrea-faria-audio-visual.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="servicos-row mobile">
+      <div class="servicos-row-left">
+        <h5>CRIAÇÃO DE MARCA</h5>
+        <p>Identidades que diferenciam, posicionam e marcam.</p>
+      </div>
+      <div class="servicos-row-right">
+        <img src="./assets/images/andrea-faria-criacao-de-marca.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="servicos-row mobile">
+      <div class="servicos-row-left">
+        <h5>WEBSITE</h5>
+        <p>Sites que impressionam, convertem e fortalecem a presença digital.</p>
+      </div>
+      <div class="servicos-row-right">
+        <img src="./assets/images/andrea-faria-web-design.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="servicos-row mobile">
+      <div class="servicos-row-left">
+        <h5>SOCIAL MEDIA</h5>
+        <p>Estratégias que atraem, engajam e constroem autoridade.</p>
+      </div>
+      <div class="servicos-row-right">
+        <img src="./assets/images/andrea-faria-social-media.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="servicos-row mobile">
+      <div class="servicos-row-left">
+        <h5>MARKETING DE PERFORMANCE</h5>
+        <p>Campanhas que alcançam as pessoas certas e geram rentabilidade.</p>
+      </div>
+      <div class="servicos-row-right">
+        <img src="./assets/images/andrea-faria-marketing-de-performance.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="servicos-row mobile">
+      <div class="servicos-row-left">
+        <h5>CONSULTORIA DE MARKETING & NEGÓCIOS</h5>
+        <p>Direção estratégica para crescer com clareza e consistência.</p>
+      </div>
+      <div class="servicos-row-right">
+        <img src="./assets/images/andrea-faria-consultoria.jpg" alt="">
       </div>
     </div>
 
@@ -134,7 +202,7 @@
         </h1>
       </div>
 
-      <div class="servicos-cta-rigth">
+      <div class="servicos-cta-right">
         <a href="#about" class="btn btn-white">Conheça Nosso Processo</a>
       </div>
     </div>
@@ -325,7 +393,7 @@
     <div class="aqui-nos-center">
       <h2><span>Aqui te ajudamos</span><br> a atrair clientes certos e aumentar conversão.</h2>
     </div>
-    <div class="aqui-nos-rigth">
+    <div class="aqui-nos-right">
       <h2><span>Aqui você encontra</span><br> branding, direção de arte e performance que impulsionam crescimento.</h2>
     </div>
   </section>
@@ -337,7 +405,7 @@
 
         <div class="footer-cta">
           <a href="https://wa.me/5521972452742" class="btn btn-primary" target="_blank">
-            Fale com a Andréa no WhatsApp
+            Fale com a Andréa
           </a>
         </div>
       </div>
@@ -355,7 +423,7 @@
         </a>
       </div>
 
-      <div class="footer-rigths">
+      <div class="footer-rights">
         <p href="tel:+5521972452742">+55 21 97245-2742</p>
         <p>&copy; 2024 Andréa Faria Marketing. <br> Todos os direitos reservados.</p>
       </div>
