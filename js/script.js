@@ -19,8 +19,6 @@ document.querySelectorAll('.carousel-btn').forEach(btn => {
 // Futuro: clique no card para detalhes do projeto
 document.querySelectorAll('.client-card').forEach(card => {
   card.addEventListener('click', function() {
-    // Aqui você pode redirecionar ou abrir modal com detalhes do cliente
-    // Exemplo: window.location.href = `/clientes/${slug-do-cliente}`;
     alert('Em breve: detalhes do projeto!');
   });
 });
@@ -44,25 +42,47 @@ document.querySelectorAll('.service-item').forEach(item => {
   const topBar = document.querySelector('.top-bar');
   if (!topBar) return;
 
-  const THRESHOLD = 70; // px - ajustar conforme necessário
+  // 👇 adicionados: selecionar mini-logo e hamburger
+  const miniLogo = document.querySelector('.top-bar-mini-logo');
+  const hamburger = document.querySelector('.top-bar-hamburger');
+
+  // 👇 estado inicial (na primeira carga da página)
+  if (miniLogo) miniLogo.classList.add('hidden'); // mini logo começa escondido
+  if (hamburger) hamburger.classList.add('hidden'); // hamburger começa escondido
+
+  const THRESHOLD = 70; // px
 
   function onScroll() {
-    if (window.scrollY > THRESHOLD) {
+    const scrolled = window.scrollY > THRESHOLD;
+
+    // animação suave entre os dois elementos
+    if (miniLogo && hamburger) {
+      if (scrolled) {
+        miniLogo.classList.remove('hidden');
+        hamburger.classList.remove('hidden');
+      } else {
+        miniLogo.classList.add('hidden');
+        hamburger.classList.add('hidden');
+      }
+    }
+
+    // comportamento original da top-bar
+    if (scrolled) {
       topBar.classList.add('scrolled');
     } else {
       topBar.classList.remove('scrolled');
     }
   }
 
-  // inicializa estado (se a página for carregada já scrolled)
+  // inicializa estado (caso a página carregue já scrolled)
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 
-  // opcional: clique no hamburger para abrir nav móvel (caso precise)
+  // abrir nav mobile (como já tinha)
   const hamb = document.querySelector('.top-bar-hamburger');
   if (hamb) {
     hamb.addEventListener('click', () => {
-      document.body.classList.toggle('nav-open'); // trate nav-open no CSS/JS se desejar
+      document.body.classList.toggle('nav-open');
     });
   }
 })();

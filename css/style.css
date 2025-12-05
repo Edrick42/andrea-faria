@@ -189,7 +189,7 @@
   /* 16px */
   --space-3: 1.5rem;
   /* 24px */
---space-4: 2rem;
+  --space-4: 2rem;
   /* 16px */
   --space-5: 2.5rem;
   /* 20px */
@@ -239,12 +239,23 @@
   --font-heavy: 900;
 
   /* Tipografia fluida */
-  --font-size-sm: clamp(0.9rem, 0.9vw + 0.5rem, 1rem);
-  --font-size-base: clamp(1rem, 1vw + 0.5rem, 1.125rem);
-  --font-size-lg: clamp(1.25rem, 1.5vw + 0.5rem, 1.75rem);
-  --font-size-xl: clamp(2rem, 3vw + 1rem, 3rem);
-  --font-size-xxl: clamp(4rem, 4vw + 1rem, 4rem);
-  --font-size-xxxl: clamp(5rem, 5vw + 1rem, 5rem);
+  --font-size-sm: 0.9rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.75rem;
+  --font-size-xxl: 2rem;
+  --font-size-xxxl: 2.25rem;
+}
+
+@media (min-width: 1024px)  {
+  :root {
+    --font-size-sm: clamp(0.9rem, 0.9vw + 0.5rem, 1rem);
+    --font-size-base: clamp(1rem, 1vw + 0.5rem, 1.125rem);
+    --font-size-lg: clamp(1.25rem, 1.5vw + 0.5rem, 1.75rem);
+    --font-size-xl: clamp(2rem, 3vw + 1rem, 3rem);
+    --font-size-xxl: clamp(4rem, 4vw + 1rem, 4rem);
+    --font-size-xxxl: clamp(5rem, 5vw + 1rem, 5rem);
+  }
 }
 
 * {
@@ -262,6 +273,10 @@ body {
   color: var(--preto);
   background-color: var(--branco);
   line-height: 1.6;
+}
+
+html, body {
+  overflow-x: hidden;
 }
 
 .logo,
@@ -333,8 +348,12 @@ h6 {
   border-radius: 1px;
 }
 
-.hidden {
-  display: none !important;
+hr {
+  border: none;
+  height: 1px;
+  background: var(--cinza);
+  width: 70%;
+  margin: var(--space-1) auto var(--space-4);
 }
 
 /* TOP BAR */
@@ -343,22 +362,12 @@ h6 {
 .top-bar-right,
 .top-bar-hamburger,
 .top-bar a {
-  transition: all .35s ease;
-}
-
-.top-bar-mini-logo img {
-  opacity: 0;
-  transform: translateY(-6px);
-  transition: opacity .35s ease, transform .35s ease;
-}
-
-.top-bar.scrolled .top-bar-mini-logo img {
-  opacity: 1;
-  transform: translateY(0px); /* sobe enquanto some */
-  pointer-events: none;
+  max-width: 100%;
+  transition: all .55s ease;
 }
 
 .top-bar-hamburger .hamburger {
+    margin: auto;
     width: 22px;
     height: 2px;
     background: var(--branco);
@@ -415,11 +424,6 @@ h6 {
   font-size: var(--font-size-sm);
 }
 
-.top-bar.scrolled .top-bar-left h5 {
-  transform: translateX(var(--space-2));
-  transition: transform .35s ease;
-}
-
 .top-bar-right {
   flex: 1;
   height: 100%;
@@ -445,18 +449,11 @@ h6 {
   width: 36px;
   height: 36px;
   object-fit: contain;
-  transform: translateX(-6px);
   transition: opacity var(--transition-medium) ease, transform var(--transition-medium) ease;
   background-color: transparent;
   border: none;
 }
 
-.top-bar.scrolled .top-bar-hamburger,
-.top-bar.scrolled .top-bar-mini-logo {
-  display: none;
-  opacity: 1;
-  transform: translateX(0);
-}
 /* TOP BAR */
 
 /* HEADER */
@@ -491,27 +488,29 @@ header {
   color: var(--branco);
   padding: 0.5rem;
   max-width: none;
-  padding: 20rem 2rem 2rem 2rem;
+  padding: 20rem 1rem 1rem 1rem;
 }
 
 .hero h1 {
   margin: 0 auto;
   width: 100%;
   font-weight: 300;
-  line-height: 1.4;
+  line-height: 1.2;
   text-align: left;
   font-family: var(--font-primary);
-  font-size: var(--font-size-lg);
-  margin-bottom: var(--space-3);
+  font-size: var(--font-size-xxxl);
+  margin-bottom: var(--space-2);
 }
 
 .hero-content .description {
   text-align: left;
   margin: 0 auto;
   width: 100%;
+  font-weight: var(--font-medium);
   font-family: var(--font-secondary);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
   margin-bottom: var(--space-5);
+  line-height: 1.2;
 }
 
 .hero-buttons {
@@ -536,10 +535,10 @@ header {
 }
 
 .cta-hero h1 {
-  font-size: var(--font-size-xl);
-  font-weight: 300;
+  font-size: var(--font-size-xxxl);
+  font-weight: var(--font-medium);
   width: 100%;
-  margin: var(--space-3) auto;
+  margin: var(--space-1) auto;
   text-align: center;
   line-height: 1.2;
 }
@@ -547,7 +546,7 @@ header {
 .cta-hero a {
   width: 300px;
   text-align: center;
-  margin: var(--space-3) auto;
+  margin: var(--space-1) auto;
 }
 /* HERO */
 
@@ -555,7 +554,7 @@ header {
 .servicos {
   display: flex;
   flex-direction: column;
-  gap: var(--space-10);
+  gap: var(--space-5);
   background-color: var(--preto);
   padding: var(--space-1);
   color: var(--branco);
@@ -564,9 +563,10 @@ header {
 }
 
 .servicos h2 {
-  font-size: var(--font-size-xl);
+  flex: 1;
+  font-size: var(--font-size-xxxl);
   font-weight: 300;
-  margin: var(--space-1) 0;
+  margin: var(--space-4) 0 0;
 }
 
 .servicos-row {
@@ -579,7 +579,7 @@ header {
   font-size: var(--font-size-xl);
   line-height: 1.2;
   font-weight: 300;
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-1);
 }
 
 .servicos-row p {
@@ -587,8 +587,8 @@ header {
   font-family: var(--font-secondary);
   font-weight: 300;
   margin: 0 auto;
-  width: 100%;
-  margin-bottom: var(--space-2);
+  width: 80%;
+  margin-bottom: var(--space-4);
 }
 
 .servicos-row-left {
@@ -622,7 +622,7 @@ header {
   flex-direction: column;
   width: 100%;
   height: auto;
-  min-height: 300px;
+  min-height: 225px;
   padding: var(--space-1) 0;
 }
 
@@ -650,14 +650,14 @@ header {
   height: 50px;
   font-size: var(--font-size-base);
   align-content: center;
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-4);
 }
 /* SERVICOS */
 
 /* CLIENTS */
 .our-clients-section {
   padding: var(--space-2) var(--space-1);
-  text-align: center;
+  text-align: left;
 }
 
 .our-clients-section h5 {
@@ -666,33 +666,37 @@ header {
   letter-spacing: 2px;
   color: var(--roxo-medio);
   text-transform: uppercase;
-  margin: var(--space-5) 0 var(--space-2);
+  margin: var(--space-5) auto var(--space-1);
+  width: 100%;
+  text-align: center;
 }
 
 .our-clients-section h2 {
+  text-align: center;
   font-family: var(--font-primary), serif;
   font-size: var(--font-size-xl);
   color: var(--preto);
   width: 100%;
   font-weight: 300;
   line-height: 1.2;
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-1);
 }
 
 .our-clients-section h4 {
+  text-align: center;
   font-family: var(--font-secondary), sans-serif;
   font-size: var(--font-size-base);
   color: var(--vinho-escuro);
   font-weight: 600;
   line-height: 1.4;
-  width: 100%;
+  width: 80%;
   margin: 0 auto var(--space-5);
 }
 
 .clients-carousel {
   overflow: hidden;
-  padding: 2rem 0 3rem 0;
-  margin-bottom: 2rem;
+  padding: var(--space-1) 0 var(--space-4) 0;
+  margin-bottom: var(--space-1);
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -705,12 +709,12 @@ header {
   align-items: center;
   width: max-content;
   will-change: transform;  
-  margin: var(--space-2) 0;
+  margin: var(--space-1) 0;
 }
 
 .clients-track img {
-  height: 100px;
-  width: 100px;
+  height: 30px;
+  width: 30px;
   filter: grayscale(100%);
   opacity: 0.75;
   transition: opacity 0.25s ease;
@@ -810,8 +814,8 @@ header {
 /* footer area */
 .our-clients-footer {
   background-color: var(--cinza);
-  margin: 0;
-  padding: var(--space-4) 0;    
+  margin: 0 -1rem;
+  padding: var(--space-4) var(--space-2);    
 }
 
 .our-clients-footer h3 {
@@ -830,16 +834,16 @@ header {
 .aqui-nos {
   display: flex;
   flex-direction: column;
-  padding: var(--space-3) 0;
+  padding: var(--space-4) 0;
   height: auto;
 }
 
 .aqui-nos h2 {
-  margin: var(--space-1);
   font-family: var(--font-secondary);
   font-size: var(--font-size-xl);
   line-height: 1.2;
-  width: 100%;
+  width: 90%;
+  margin-bottom: var(--space-4);
 }
 
 .aqui-nos h2 span {
@@ -875,14 +879,14 @@ header {
 /* FOOTER */
 .footer {
   background-color: var(--azul-principal);
-  padding: var(--space-2) var(--space-1);
+  padding: var(--space-6) var(--space-1) var(--space-2);
   text-align: center;
 }
 
 .footer-content {
   display: flex;
   flex-direction: column;
-  margin: 0 auto var(--space-2);
+  margin: 0 auto var(--space-1);
   gap: var(--space-2);
 }
 
@@ -904,7 +908,7 @@ header {
   display: flex;
   flex-direction: column;
   align-content: start;
-  gap: var(--space-4);
+  gap: var(--space-2);
   justify-content: center;
   margin: 0;
   flex-wrap: wrap;
@@ -989,11 +993,14 @@ header {
 
 /* DESKTOP */
 @media (min-width: 1024px) {
-  /* TOP BAR */
-  .top-bar-hamburger .hamburger {
-      width: 22px;
-      height: 2px;
-      margin-right: 1rem;
+  .top-bar.scrolled .top-bar-left h5 {
+    transform: translateX(var(--space-2));
+    transition: transform .55s ease;
+  }
+
+  .top-bar .top-bar-left h5 {
+    transform: translateX(0);
+    transition: transform .55s ease;
   }
 
   .top-bar {
@@ -1016,11 +1023,6 @@ header {
 
   .top-bar.scrolled .top-bar-left h5 {
     transform: translateX(var(--space-2));
-  }
-
-  .top-bar-hamburger,
-  .top-bar-mini-logo {
-    display: none;
   }
   /* TOP BAR */
   
@@ -1106,6 +1108,11 @@ header {
     text-align: center;
     font-size: var(--font-size-base);
     margin-bottom: var(--space-5);
+  }
+
+  .hero-content br {
+    margin-bottom: 2px; /* aumenta a "altura" do break */
+    display: block;
   }
 
   .hero-buttons {
@@ -1242,14 +1249,16 @@ header {
   }
 
   .our-clients-section h2 {
+    text-align: center;
     font-size: var(--font-size-xl);
     width: 70%;
     margin: 0 auto var(--space-2) auto;
   }
 
   .our-clients-section h4 {
+    text-align: center;
     font-size: var(--font-size-base);
-    width: 50%;
+    width: 100%;
     margin: 0 auto var(--space-5);
   }
 
@@ -1283,8 +1292,13 @@ header {
 
   /* footer area */
   .our-clients-footer {
-    margin: var(--space-13) auto;
+    margin: var(--space-13) auto var(--space-4);
     padding: var(--space-5) auto;    
+  }
+
+  .our-clients-footer br {
+    margin-bottom: var(--space-1); /* aumenta a "altura" do break */
+    display: block;
   }
 
   .our-clients-footer h3 {
@@ -1425,4 +1439,37 @@ header {
   .desktop {
     display: flex;
   }
+
+  /* manter o elemento presente no fluxo para que a transição funcione */
+  .top-bar-mini-logo.fade-toggle.hidden {
+    /* imagem -> block */
+    display: block !important;
+    opacity: 0;
+    transform: translateY(-6px);
+    pointer-events: none;
+  }
+}
+
+/* === animação fade-toggle (coloque no final do style.css) === */
+.fade-toggle {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition: opacity .35s ease, transform .35s ease;
+}
+
+.top-bar-hamburger.fade-toggle.hidden {
+  /* hamburger é uma span dentro do botão -> inline-block funciona */
+  display: inline-block !important;
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+}
+
+/* fallback geral para outros elementos com fade-toggle */
+.fade-toggle.hidden {
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  /* NÃO usar display:none aqui — usamos as regras específicas acima */
 }
