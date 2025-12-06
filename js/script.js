@@ -42,6 +42,8 @@ document.querySelectorAll('.service-item').forEach(item => {
   const topBar = document.querySelector('.top-bar');
   if (!topBar) return;
 
+  const topBarBottom = document.querySelector('.top-bar-bottom');
+
   // 👇 adicionados: selecionar mini-logo e hamburger
   const miniLogo = document.querySelector('.top-bar-mini-logo');
   const hamburger = document.querySelector('.top-bar-hamburger');
@@ -63,6 +65,7 @@ document.querySelectorAll('.service-item').forEach(item => {
       } else {
         miniLogo.classList.add('hidden');
         hamburger.classList.add('hidden');
+        topBarBottom.classList.remove('hidden');
       }
     }
 
@@ -80,7 +83,6 @@ document.querySelectorAll('.service-item').forEach(item => {
 
   // abrir nav mobile (como já tinha)
   const hamb = document.querySelector('.top-bar-hamburger');
-  const topBarBottom = document.querySelector('.top-bar-bottom');
   if (hamb) {
     hamb.addEventListener('click', () => {
       topBarBottom.classList.toggle('hidden');

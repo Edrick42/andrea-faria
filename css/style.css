@@ -456,13 +456,15 @@ hr {
 
 /* estado normal: aparece abaixo */
 .top-bar-bottom {
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  height: 70px;
+  height: 60px;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: start;
   margin: 0;
-  padding: var(--space-1) var(--space-5);
+  padding: var(--space-2) 0 var(--space-5);
   background-color: var(--preto);
 
   position: fixed;
@@ -474,7 +476,16 @@ hr {
 
 /* estado escondido: só sobe para trás da top-bar */
 .top-bar-bottom.hidden {
-  transform: translateY(70px); /* sobe completamente */
+  transform: translateY(60px); /* sobe completamente */
+}
+
+.top-bar-bottom hr {
+  border: none;
+  height: 1px;
+  background: var(--cinza);
+  width: 70%;
+  margin: 0 var(--space-1) var(--space-1);
+  flex: 1 0 auto;
 }
 
 nav ul {
@@ -1081,6 +1092,8 @@ header {
   }
 
   .top-bar-bottom {
+    align-content: center;
+    justify-content: start;
     padding: var(--space-4) var(--space-5);
   }
   /* TOP BAR */
