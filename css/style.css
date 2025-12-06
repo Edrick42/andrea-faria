@@ -412,7 +412,7 @@ hr {
 }
 
 .top-bar-left {
-  flex: 3;
+  flex: 4;
   height: 100%;
   display: flex;
   justify-content: start;
@@ -423,6 +423,8 @@ hr {
   margin: 0;
   width: 100%;
   font-size: var(--font-size-sm);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
 }
 
 .top-bar-right {
@@ -506,9 +508,7 @@ nav a {
   color: var(--branco);
   font-size: var(--font-size-sm);
   font-weight: var(--font-medium);
-  /* diminui o tamanho da fonte dos links */
-  padding: var(--space-1) var(--space-1);
-  /* diminui o padding dos links */
+  padding: var(--space-1);
 }
 
 nav a:hover {
@@ -1076,7 +1076,7 @@ header {
   }
 
   .top-bar-left h5 {
-    font-weight: var(--font-medium);
+    letter-spacing: 2px;
     font-size: var(--font-size-base);
   }
 
@@ -1095,6 +1095,10 @@ header {
     align-content: center;
     justify-content: start;
     padding: var(--space-4) var(--space-5);
+  }
+
+  nav a {
+    padding: var(--space-1) var(--space-1) var(--space-1) 0;
   }
   /* TOP BAR */
   
