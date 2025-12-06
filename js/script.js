@@ -80,9 +80,10 @@ document.querySelectorAll('.service-item').forEach(item => {
 
   // abrir nav mobile (como já tinha)
   const hamb = document.querySelector('.top-bar-hamburger');
+  const topBarBottom = document.querySelector('.top-bar-bottom');
   if (hamb) {
     hamb.addEventListener('click', () => {
-      document.body.classList.toggle('nav-open');
+      topBarBottom.classList.toggle('hidden');
     });
   }
 })();

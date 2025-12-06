@@ -401,12 +401,13 @@ hr {
   left: 0;
   max-width: 100%;
   height: 70px;
+  height: auto;
   background-color: var(--preto);
   color: var(--branco);
   flex-direction: row;
   flex-wrap: wrap;
   align-content: space-between;
-  z-index: 1001;
+  z-index: 1002;
   padding: var(--space-1) var(--space-1);
 }
 
@@ -430,7 +431,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: end;
-  transform: translateX(0);
+  transform: translateX(0) translateY(5px);
 }
 
 .top-bar-right .call-btn:hover {
@@ -438,7 +439,6 @@ hr {
   background-color: var(--branco);
   color: var(--preto);
 }
-
 
 .top-bar-mini-logo {
   display: none;
@@ -452,6 +452,61 @@ hr {
   transition: opacity var(--transition-medium) ease, transform var(--transition-medium) ease;
   background-color: transparent;
   border: none;
+}
+
+/* estado normal: aparece abaixo */
+.top-bar-bottom {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin: 0;
+  padding: var(--space-1) var(--space-5);
+  background-color: var(--preto);
+
+  position: fixed;
+  z-index: 1001; /* fica atrás da top-bar */
+
+  transform: translateY(0);
+  transition: transform 0.65s ease;
+}
+
+/* estado escondido: só sobe para trás da top-bar */
+.top-bar-bottom.hidden {
+  transform: translateY(70px); /* sobe completamente */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: var(--space-2);
+  font-family: var(--font-secondary);
+}
+
+nav ul li {
+  color: var(--branco);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--branco);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-medium);
+  /* diminui o tamanho da fonte dos links */
+  padding: var(--space-1) var(--space-1);
+  /* diminui o padding dos links */
+}
+
+nav a:hover {
+  color: var(--rosa-medio);
+}
+
+.call-btn {
+  font-size: 0.95rem;
+  padding: 0.4rem 0.8rem;
 }
 
 /* TOP BAR */
@@ -999,8 +1054,8 @@ header {
   }
 
   .top-bar .top-bar-left h5 {
-    transform: translateX(0);
-    transition: transform .55s ease;
+    transform: translateX(-42px);
+    transition: transform .95s ease;
   }
 
   .top-bar {
@@ -1023,6 +1078,10 @@ header {
 
   .top-bar.scrolled .top-bar-left h5 {
     transform: translateX(var(--space-2));
+  }
+
+  .top-bar-bottom {
+    padding: var(--space-4) var(--space-5);
   }
   /* TOP BAR */
   
@@ -1049,38 +1108,6 @@ header {
     height: 18px;
     /* diminui o tamanho do logo no desktop */
     width: auto;
-  }
-
-  nav ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    gap: var(--space-2);
-    font-family: var(--font-secondary);
-  }
-
-  nav ul li {
-    color: var(--branco);
-  }
-
-  nav a {
-    text-decoration: none;
-    color: var(--branco);
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-medium);
-    /* diminui o tamanho da fonte dos links */
-    padding: var(--space-1) var(--space-1);
-    /* diminui o padding dos links */
-  }
-
-  nav a:hover {
-    color: var(--rosa-medio);
-  }
-
-  .call-btn {
-    font-size: 0.95rem;
-    padding: 0.4rem 0.8rem;
   }
   /* HEADER */
 
@@ -1443,7 +1470,7 @@ header {
   /* manter o elemento presente no fluxo para que a transição funcione */
   .top-bar-mini-logo.fade-toggle.hidden {
     /* imagem -> block */
-    display: block !important;
+    display: inline-block !important;
     opacity: 0;
     transform: translateY(-6px);
     pointer-events: none;
@@ -1455,7 +1482,10 @@ header {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
-  transition: opacity .35s ease, transform .35s ease;
+
+  transition:
+    opacity 2s ease-out,
+    transform 2s ease-out;
 }
 
 .top-bar-hamburger.fade-toggle.hidden {
@@ -1471,5 +1501,8 @@ header {
   opacity: 0;
   transform: translateY(-6px);
   pointer-events: none;
-  /* NÃO usar display:none aqui — usamos as regras específicas acima */
+
+  transition:
+    opacity 0.20s ease-in,
+    transform 0.20s ease-in;
 }
