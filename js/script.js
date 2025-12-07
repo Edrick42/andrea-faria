@@ -4,7 +4,7 @@ function makeCall() {
 }
 
 document.querySelectorAll('.carousel-btn').forEach(btn => {
-  btn.addEventListener('click', function() {
+  btn.addEventListener('click', function () {
     const track = document.querySelector('.carousel-track');
     const card = track.querySelector('.client-card');
     const scrollAmount = card.offsetWidth + 32; // card width + gap
@@ -18,7 +18,7 @@ document.querySelectorAll('.carousel-btn').forEach(btn => {
 
 // Futuro: clique no card para detalhes do projeto
 document.querySelectorAll('.client-card').forEach(card => {
-  card.addEventListener('click', function() {
+  card.addEventListener('click', function () {
     alert('Em breve: detalhes do projeto!');
   });
 });
@@ -89,3 +89,90 @@ document.querySelectorAll('.service-item').forEach(item => {
     });
   }
 })();
+
+function smoothScrollTo(targetY, duration = 500) {
+  const startY = window.scrollY;
+  const distance = targetY - startY - 70;
+  const startTime = performance.now();
+
+  function scroll(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+
+    window.scrollTo(0, startY + distance * ease);
+
+    if (progress < 1) {
+      requestAnimationFrame(scroll);
+    }
+
+  }
+
+  requestAnimationFrame(scroll);
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if (!target) return;
+
+    const targetY = target.offsetTop;
+    smoothScrollTo(targetY, 2500);
+  });
+});
+
+const ctaSection = document.querySelector(".servicos-cta");
+
+const observerEntrada = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio >= 0.2) {
+      ctaSection.classList.add("show");
+    }
+  });
+}, {
+  threshold: [0.2]
+});
+
+const observerSaida = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio <= 0.4) {
+      ctaSection.classList.remove("show");
+    }
+  });
+}, {
+  threshold: [0.4]
+});
+
+observerEntrada.observe(ctaSection);
+observerSaida.observe(ctaSection);
+
+function createIntersectionAnimations(selector, className) {
+  const element = document.querySelector(selector);
+
+  // ENTRADA — aparece com 60%
+  const observerEntrada = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.intersectionRatio >= 0.6) {
+        element.classList.add(className);
+      }
+    });
+  }, { threshold: [0.6] });
+
+  // SAÍDA — some quando tiver menos de 40%
+  const observerSaida = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.intersectionRatio <= 0.9) {
+        element.classList.remove(className);
+      }
+    });
+  }, { threshold: [0.9] });
+
+  observerEntrada.observe(element);
+  observerSaida.observe(element);
+}
+
+// aplicar nos 3 blocos
+createIntersectionAnimations(".aqui-nos-left", "show-left");
+createIntersectionAnimations(".aqui-nos-center", "show-center");
+createIntersectionAnimations(".aqui-nos-right", "show-right");
