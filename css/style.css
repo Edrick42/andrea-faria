@@ -258,10 +258,23 @@
   }
 }
 
+a[href^="tel"] {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+meta[name="format-detection"] {
+  content: "telephone=no";
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: none;
+  -webkit-user-select: text;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
