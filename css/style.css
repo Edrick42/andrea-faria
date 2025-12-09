@@ -527,20 +527,19 @@ nav ul {
   font-family: var(--font-secondary);
 }
 
-nav ul li {
-  color: var(--branco);
-}
-
 nav a {
   text-decoration: none;
-  color: var(--branco);
+  color: var(--preto);
   font-size: var(--font-size-sm);
   font-weight: var(--font-medium);
   padding: var(--space-1);
+  transition: all 0.2s ease;
+  display: inline-block;
 }
 
 nav a:hover {
-  color: var(--rosa-medio);
+  color: var(--vinho-escuro);
+  transform: scale(1.1);
 }
 
 .call-btn {
