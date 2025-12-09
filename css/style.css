@@ -353,12 +353,23 @@ h6 {
   color: var(--branco);
 }
 
-.btn-divider {
+.btn-black {
+  border: 2px solid var(--preto);
+  color: var(--preto);
+}
+
+.btn-black:hover {
+  background: var(--preto);
+  color: var(--branco);
+}
+
+.divider {
   display: inline-block;
-  width: 2px;
-  height: 32px;
-  background: #fff;
-  border-radius: 1px;
+  width: 1px;
+  height: 400px;
+  background: var(--preto);
+  margin: auto 20px auto 0;
+  opacity: 0.1;
 }
 
 hr {
@@ -376,7 +387,7 @@ hr {
 .top-bar-hamburger,
 .top-bar a {
   max-width: 100%;
-  transition: all .55s ease;
+  transition: all .35s ease;
 }
 
 .top-bar-hamburger .hamburger {
@@ -446,7 +457,11 @@ hr {
   display: flex;
   align-items: center;
   justify-content: end;
-  transform: translateX(0) translateY(5px);
+  margin: auto;
+}
+
+.top-bar-right.scrolled {
+  transform: translateX(0px) translateY(0);
 }
 
 .top-bar-right .call-btn:hover {
@@ -464,7 +479,7 @@ hr {
   width: 36px;
   height: 36px;
   object-fit: contain;
-  transition: opacity var(--transition-medium) ease, transform var(--transition-medium) ease;
+  transition: opacity var(--transition-medium) ease, transform 0.35s ease;
   background-color: transparent;
   border: none;
 }
@@ -479,14 +494,14 @@ hr {
   align-items: center;
   justify-content: start;
   margin: 0;
-  padding: var(--space-2) 0 var(--space-5);
+  padding: var(--space-2) 0 var(--space-6);
   background-color: var(--preto);
 
   position: fixed;
   z-index: 1001; /* fica atrás da top-bar */
 
   transform: translateY(0);
-  transition: transform 0.65s ease;
+  transition: transform 0.35s ease;
 }
 
 /* estado escondido: só sobe para trás da top-bar */
@@ -544,52 +559,73 @@ header {
 /* HERO */
 .hero {
   min-height: 70vh;
-  background: url('../assets/images/hero.webp') center center / cover no-repeat;
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  background-color: var(--branco);
+  padding: var(--space-6) var(--space-1) var(--space-4);
+  justify-content: space-between;
 }
 
 .hero-content {
+  flex: 5;
+  display: flex;
   position: relative;
   z-index: 1;
   color: var(--branco);
-  padding: 0.5rem;
   max-width: none;
-  padding: 20rem 1rem 1rem 1rem;
+  justify-content: end;
+  align-items: start;
+  flex-direction: column;
+  gap: 0;
 }
 
 .hero h1 {
+  flex: 1;
   margin: 0 auto;
   width: 100%;
   font-weight: 300;
   line-height: 1.2;
   text-align: left;
-  font-family: var(--font-primary);
+  color: var(--preto);
+  font-family: var(--font-secondary);
   font-size: var(--font-size-xxxl);
-  margin-bottom: var(--space-2);
+  font-weight: var(--font-bold);
+  margin-bottom: -3rem;
+  align-content: end;
+}
+
+.hero h1 span {
+  font-family: var(--font-primary);
+  font-weight: var(--font-light);
 }
 
 .hero-content .description {
+  flex: 1;
+  margin: 0;
   text-align: left;
-  margin: 0 auto;
-  width: 100%;
-  font-weight: var(--font-medium);
+  color: var(--preto);
   font-family: var(--font-secondary);
   font-size: var(--font-size-base);
-  margin-bottom: var(--space-5);
-  line-height: 1.2;
+  align-content: end;
+  padding-bottom: var(--space-4);
+}
+
+.hero-content .btn {
+  flex: 1;
+  width: 100%;
+  text-align: center;
+  max-height: 40px;
+}
+
+.hero-content-right {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-content: start;
+  justify-content: end;
+  border-left: 2px var(--preto);
+  gap: 4px;
 }
 
 .hero-buttons {
@@ -597,10 +633,18 @@ header {
   flex-direction: row;
   gap: 1rem;
   align-items: center;
+  max-width: 200px;
 }
 
 .hero-buttons .btn {
   flex: 1;
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente (opcional) */
+}
+
+.hero-content-logo  {
+  width: 40px;
 }
 
 .cta-hero {
@@ -613,19 +657,62 @@ header {
   justify-content: center;
 }
 
-.cta-hero h1 {
+.cta-hero-top {
+  flex: 1;
+}
+
+.cta-hero-top h1 {
+  font-family: var(--font-primary);
   font-size: var(--font-size-xxxl);
-  font-weight: var(--font-medium);
+  font-weight: var(--font-light);
   width: 100%;
   margin: var(--space-1) auto;
   text-align: center;
   line-height: 1.2;
 }
 
-.cta-hero a {
-  width: 300px;
+.cta-hero-bottom {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: end;
+  align-items: center;
+}
+
+.cta-hero-bottom a {
+  flex: 1;
   text-align: center;
-  margin: var(--space-1) auto;
+}
+
+.cta-hero-top,
+.cta-hero-bottom {
+  opacity: 0;
+  transition: 0.8s ease;
+}
+
+.cta-hero-top {
+  transform: translateX(-60px);
+}
+
+.cta-hero-bottom {
+  transform: translateX(60px);
+}
+
+.cta-hero.show .cta-hero-top,
+.cta-hero.show .cta-hero-bottom {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.cta-hero-bottom .btn {
+  height: 40px;
+  max-width: 250px;
+  margin: 0 auto;
+  font-size: var(--font-size-sm);
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente (opcional) */
 }
 /* HERO */
 
@@ -934,6 +1021,7 @@ header {
   font-weight: var(--font-light);
   line-height: 1.2;
 }
+
 /* CLIENTS */
 
 /* AQUI NOS */
@@ -1142,6 +1230,8 @@ header {
     height: 70px;
     width: 100%;
     padding: var(--space-2) var(--space-5);
+    display: flex;
+    justify-content: space-between;
   }
 
   .top-bar-left h5 {
@@ -1153,7 +1243,13 @@ header {
   .top-bar.scrolled .top-bar-mini-logo {
     display: inline-block;
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(0px);
+  }
+
+  .top-bar.scrolled .top-bar-mini-logo {
+    display: inline-block;
+    opacity: 1;
+    transform: translateX(0px);
   }
 
   .top-bar.scrolled .top-bar-left h5 {
@@ -1164,6 +1260,13 @@ header {
     align-content: center;
     justify-content: start;
     padding: var(--space-4) var(--space-5);
+  }
+
+  .header-left {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-2);
+    align-items: center;
   }
 
   nav a {
@@ -1199,33 +1302,40 @@ header {
 
   /* HERO */
   .hero {
+    flex-direction: row;
     height: 900px;
     margin-top: -100px;
   }
 
   .hero-content {
-    padding: var(--space-1);
-    max-width: none;
-    padding: var(--space-24) var(--space-2) var(--space-2) var(--space-2);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    padding: 25% 0 var(--space-10) var(--space-6);
+  }
+
+  .hero h1 span {
+    font-family: var(--font-primary);
+    font-weight: var(--font-light);
   }
 
   .hero h1 {
-    text-align: center;
-    width: 80%;
-    font-size: var(--font-size-xl);
+    text-align: left;
+    width: 100%;
+    font-size: var(--font-size-xxxl);
     margin-bottom: var(--space-3);
+    font-family: var(--font-secondary);
+    font-weight: var(--font-bold);
   }
 
-  .hero-content .description {
-    width: 60%;
-    text-align: center;
+  .hero .description {
     font-size: var(--font-size-base);
-    margin-bottom: var(--space-5);
-  }
-
-  .hero-content br {
-    margin-bottom: 2px; /* aumenta a "altura" do break */
-    display: block;
+    font-family: var(--font-secondary);
+    color: var(--preto);
+    font-weight: var(--font-medium);
+    width: 280px;
+    align-content: end;
   }
 
   .hero-buttons {
@@ -1236,19 +1346,55 @@ header {
     width: 300px;
   }
 
+  .hero-content-right {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    gap: var(--space-1);
+    margin: 0;
+    padding:  0 var(--space-5) var(--space-10);
+  }
+
+  .hero-content-logo {
+    cursor: pointer;
+    width: 40px;
+    transition: transform 0.20s ease-in;  
+  }
+
+  .hero-content-logo:hover {
+    transform: scale(1.25);
+  }
+
   .cta-hero {
-    height: 500px;
-    padding: var(--space-5);
+    height: 800px;
+    padding: var(--space-12) var(--space-6);
+    justify-content: start;
+    align-content: space-between;
   }
 
   .cta-hero h1 {
+    text-align: left;
     font-size: var(--font-size-xxxl);
-    width: 80%;
-    margin: var(--space-3) auto;
+    width: 100%;
+    margin: 0;
   }
 
-  .cta-hero a {
-    margin: var(--space-3) auto;
+  .cta-hero-bottom {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: end;
+    align-items: end;
+  }
+
+  .cta-hero-bottom .btn {
+      max-width: 400px;
+      height: 80px;
+      font-size: var(--font-size-lg);
+      align-content: center;
+      margin: 0;
   }
   /* HERO */
 
@@ -1588,7 +1734,7 @@ header {
   /* hamburger é uma span dentro do botão -> inline-block funciona */
   display: inline-block !important;
   opacity: 0;
-  transform: translateY(-6px);
+  transform: translateX(0px) translateY(-6px);
   pointer-events: none;
 }
 

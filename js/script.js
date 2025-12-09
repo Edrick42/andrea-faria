@@ -48,6 +48,8 @@ document.querySelectorAll('.service-item').forEach(item => {
   const miniLogo = document.querySelector('.top-bar-mini-logo');
   const hamburger = document.querySelector('.top-bar-hamburger');
 
+  const topBarRight = document.querySelector('.top-bar-right');
+
   // 👇 estado inicial (na primeira carga da página)
   if (miniLogo) miniLogo.classList.add('hidden'); // mini logo começa escondido
   if (hamburger) hamburger.classList.add('hidden'); // hamburger começa escondido
@@ -71,8 +73,10 @@ document.querySelectorAll('.service-item').forEach(item => {
 
     // comportamento original da top-bar
     if (scrolled) {
+      topBarRight.classList.add('scrolled');
       topBar.classList.add('scrolled');
     } else {
+      topBarRight.classList.remove('scrolled');
       topBar.classList.remove('scrolled');
     }
   }
@@ -122,30 +126,55 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-const ctaSection = document.querySelector(".servicos-cta");
+const ctaSectionServicos = document.querySelector(".servicos-cta");
 
-const observerEntrada = new IntersectionObserver((entries) => {
+const observerEntradaServicos = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.intersectionRatio >= 0.2) {
-      ctaSection.classList.add("show");
+      ctaSectionServicos.classList.add("show");
     }
   });
 }, {
   threshold: [0.2]
 });
 
-const observerSaida = new IntersectionObserver((entries) => {
+const observerSaidaServicos = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.intersectionRatio <= 0.4) {
-      ctaSection.classList.remove("show");
+      ctaSectionServicos.classList.remove("show");
     }
   });
 }, {
   threshold: [0.4]
 });
 
-observerEntrada.observe(ctaSection);
-observerSaida.observe(ctaSection);
+observerEntradaServicos.observe(ctaSectionServicos);
+observerSaidaServicos.observe(ctaSectionServicos);
+
+const ctaSectionHero = document.querySelector(".cta-hero");
+
+const observerEntradaHero = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio >= 0.2) {
+      ctaSectionHero.classList.add("show");
+    }
+  });
+}, {
+  threshold: [0.2]
+});
+
+const observerSaidaHero = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio <= 0.4) {
+      ctaSectionHero.classList.remove("show");
+    }
+  });
+}, {
+  threshold: [0.4]
+});
+
+observerEntradaHero.observe(ctaSectionHero);
+observerSaidaHero.observe(ctaSectionHero);
 
 function createIntersectionAnimations(selector, className) {
   const element = document.querySelector(selector);
