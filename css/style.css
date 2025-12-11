@@ -608,6 +608,7 @@ header {
   font-size: var(--font-size-base);
   align-content: end;
   padding-bottom: var(--space-4);
+  width: 80%;
 }
 
 .hero-content .btn {
