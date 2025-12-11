@@ -557,7 +557,7 @@ header {
 
 /* HERO */
 .hero {
-  min-height: 90vh;
+  min-height: 85vh;
   position: relative;
   display: flex;
   flex-direction: column;
