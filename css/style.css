@@ -557,7 +557,7 @@ header {
 
 /* HERO */
 .hero {
-  min-height: 70vh;
+  min-height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -580,7 +580,7 @@ header {
 }
 
 .hero h1 {
-  flex: 1;
+  flex: 3;
   margin: 0 auto;
   width: 100%;
   font-weight: 300;
@@ -1312,6 +1312,18 @@ header {
     align-items: start;
     justify-content: space-between;
     padding: 25% 0 var(--space-10) var(--space-6);
+  }
+
+  .hero-content .description {
+    padding: 0;
+  }
+
+  .hero-content-right a {
+    display: flex;
+    align-items: flex-end;   /* bottom */
+    justify-content: flex-end; /* right */
+    width: 40px;   /* ajuste ao tamanho desejado */
+    height: 40px;  /* ajuste ao tamanho desejado */
   }
 
   .hero h1 span {
