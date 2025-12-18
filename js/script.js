@@ -205,3 +205,24 @@ function createIntersectionAnimations(selector, className) {
 createIntersectionAnimations(".aqui-nos-left", "show-left");
 createIntersectionAnimations(".aqui-nos-center", "show-center");
 createIntersectionAnimations(".aqui-nos-right", "show-right");
+
+document.querySelectorAll('.servico-header').forEach(header => {
+  header.addEventListener('click', () => {
+    const item = header.parentElement;
+    const isOpen = item.classList.contains('active');
+
+    // Fecha todos
+    document.querySelectorAll('.servico-item').forEach(i => {
+      i.classList.remove('active');
+      i.querySelector('.icon').textContent = '+';
+      i.querySelector('.servico-header').setAttribute('aria-expanded', 'false');
+    });
+
+    // Abre o clicado
+    if (!isOpen) {
+      item.classList.add('active');
+      header.querySelector('.icon').textContent = '–';
+      header.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
