@@ -732,6 +732,7 @@ header {
   display: flex;
   align-items: center; /* Centraliza verticalmente */
   justify-content: center; /* Centraliza horizontalmente (opcional) */
+  margin-bottom: var(--space-2);
 }
 /* HERO */
 
