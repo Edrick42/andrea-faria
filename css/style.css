@@ -648,13 +648,31 @@ header {
 }
 
 .cta-hero {
-  height: 300px;
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
   display: flex;
   flex-flow: column;
-  background-color: var(--vinho-escuro);
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.4);
   color: var(--branco);
   padding: var(--space-1);
   justify-content: center;
+}
+
+.cta-hero video {
+  position: absolute;
+  object-fit: cover;
+  
+  inset: 0;
+  width: 100%;
+  height: 110vh;
+
+  top: -10vh;
+  object-fit: cover;
+
+  z-index: -1;
 }
 
 .cta-hero-top {
@@ -677,7 +695,7 @@ header {
   flex-direction: row;
   align-items: end;
   justify-content: end;
-  align-items: center;
+  align-items: end;
 }
 
 .cta-hero-bottom a {
@@ -763,9 +781,9 @@ header {
 }
 
 .servico-content {
-  max-height: 0;
+  display: grid;
   overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.3s ease;
+  transition: max-height 0.4s ease;
   color: var(--branco);
   display: flex;
   flex-direction: row;
@@ -775,8 +793,10 @@ header {
 
 .servico-content-left,
 .servicos-content-right {
+  height: auto;
   width: 100%;
   flex: none;
+  align-self: flex-start;
 }
 
 .servico-content-left {
@@ -796,9 +816,8 @@ header {
 }
 
 .servicos-content-right img {
-  max-height: 300px;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   padding: 0;
 }
@@ -806,7 +825,7 @@ header {
 .servico-item.active .servico-content {
   display: flex;
   flex-direction: column;
-  max-height: none; /* desktop */
+  max-height: 900px; /* desktop */
   padding-top: var(--space-3);
   padding-bottom: var(--space-4);
 }
@@ -816,8 +835,8 @@ header {
   width: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
-
 
 .servicos-cta {
   display: flex;
@@ -830,14 +849,27 @@ header {
 
 .servicos-cta-left {
   flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .servicos-cta-left h1 {
+  color: var(--branco);
   font-family: var(--font-primary);
   font-size: var(--font-size-xl);
   font-weight: 300;
   line-height: 1.2;
   text-align: center;
+  margin-bottom: var(--space-4);
+}
+
+.servicos-cta-left p {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-sm);
+  text-align: center;
+  margin-bottom: var(--space-4);
+  width: 100%;
 }
 
 .servicos-cta-right {
@@ -1409,7 +1441,8 @@ header {
   }
 
   .cta-hero {
-    height: 800px;
+    width: 100%;
+    height: 90vh;
     padding: var(--space-12) var(--space-6);
     justify-content: start;
     align-content: space-between;
@@ -1467,11 +1500,11 @@ header {
   .servico-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease;
     color: var(--branco);
     display: flex;
     flex-direction: row;
     gap: var(--space-4);
+    transition: max-height 0.4s ease, opacity 0.25s ease;
   }
 
   .servico-content-left {
@@ -1479,6 +1512,10 @@ header {
     display: flex;
     flex-direction: column;
     align-items: start;
+  }
+
+  .servico-content-left .btn {
+    max-width: 300px;
   }
 
   .servicos-content-right {
@@ -1491,10 +1528,12 @@ header {
 
   .servicos-content-right img {
     max-height: 400px;
-    height: 100%;
+    height: auto;
     width: 100%;
     object-fit: cover;
     padding: 0;
+    will-change: transform;
+    transform: translateZ(0);
   }
 
   .servico-content-left p {
@@ -1505,7 +1544,8 @@ header {
   }
 
   .servico-item.active .servico-content {
-    max-height: 600px; /* suficiente para texto + botão */
+    flex-direction: row;
+    max-height: 700px; 
     padding-bottom: var(--space-4);
   }
 
@@ -1530,6 +1570,13 @@ header {
     font-family: var(--font-primary);
     font-size: var(--font-size-xxxl);
     text-align: left;
+  }
+
+  .servicos-cta-left p {
+    font-size: var(--font-size-base);
+    text-align: left;
+    margin-bottom: var(--space-4);
+    width: 40%;
   }
 
   .servicos-cta-right {

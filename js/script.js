@@ -211,18 +211,38 @@ document.querySelectorAll('.servico-header').forEach(header => {
     const item = header.parentElement;
     const isOpen = item.classList.contains('active');
 
-    // Fecha todos
+    // FECHAR
+    if (isOpen) {
+      // FASE 1 – desliga imagem
+      item.classList.add('is-closing');
+
+      // FASE 2 – colapsa depois que a imagem saiu do frame
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          item.classList.remove('active');
+
+          // FASE 3 – só reativa depois do colapso
+          setTimeout(() => {
+            item.classList.remove('is-closing');
+          }, 300); // tempo do colapso
+        }, 50); // garante frame limpo
+      });
+
+      header.setAttribute('aria-expanded', 'false');
+      header.querySelector('.icon').textContent = '+';
+      return;
+    }
+
+    // ABRIR
     document.querySelectorAll('.servico-item').forEach(i => {
-      i.classList.remove('active');
+      i.classList.remove('active', 'is-closing');
       i.querySelector('.icon').textContent = '+';
-      i.querySelector('.servico-header').setAttribute('aria-expanded', 'false');
+      i.querySelector('.servico-header')
+        .setAttribute('aria-expanded', 'false');
     });
 
-    // Abre o clicado
-    if (!isOpen) {
-      item.classList.add('active');
-      header.querySelector('.icon').textContent = '–';
-      header.setAttribute('aria-expanded', 'true');
-    }
+    item.classList.add('active');
+    header.querySelector('.icon').textContent = '–';
+    header.setAttribute('aria-expanded', 'true');
   });
 });
