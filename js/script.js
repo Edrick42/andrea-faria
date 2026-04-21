@@ -126,58 +126,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-const ctaSectionServicos = document.querySelector(".servicos-cta");
+function attachShowOnIntersect(element, { enter = 0.2, leave = 0.4 } = {}) {
+  if (!element) return;
+  new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.intersectionRatio >= enter) element.classList.add("show");
+    });
+  }, { threshold: [enter] }).observe(element);
+  new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.intersectionRatio <= leave) element.classList.remove("show");
+    });
+  }, { threshold: [leave] }).observe(element);
+}
 
-const observerEntradaServicos = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.intersectionRatio >= 0.2) {
-      ctaSectionServicos.classList.add("show");
-    }
-  });
-}, {
-  threshold: [0.2]
-});
-
-const observerSaidaServicos = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.intersectionRatio <= 0.4) {
-      ctaSectionServicos.classList.remove("show");
-    }
-  });
-}, {
-  threshold: [0.4]
-});
-
-observerEntradaServicos.observe(ctaSectionServicos);
-observerSaidaServicos.observe(ctaSectionServicos);
-
-const ctaSectionHero = document.querySelector(".cta-hero");
-
-const observerEntradaHero = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.intersectionRatio >= 0.2) {
-      ctaSectionHero.classList.add("show");
-    }
-  });
-}, {
-  threshold: [0.2]
-});
-
-const observerSaidaHero = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.intersectionRatio <= 0.4) {
-      ctaSectionHero.classList.remove("show");
-    }
-  });
-}, {
-  threshold: [0.4]
-});
-
-observerEntradaHero.observe(ctaSectionHero);
-observerSaidaHero.observe(ctaSectionHero);
+attachShowOnIntersect(document.querySelector(".servicos-cta"));
+attachShowOnIntersect(document.querySelector(".cta-hero"));
 
 function createIntersectionAnimations(selector, className) {
   const element = document.querySelector(selector);
+  if (!element) return;
 
   // ENTRADA — aparece com 60%
   const observerEntrada = new IntersectionObserver((entries) => {
@@ -205,6 +173,63 @@ function createIntersectionAnimations(selector, className) {
 createIntersectionAnimations(".aqui-nos-left", "show-left");
 createIntersectionAnimations(".aqui-nos-center", "show-center");
 createIntersectionAnimations(".aqui-nos-right", "show-right");
+
+/* ============================================================
+   CASES — autoplay videos on hover, lightbox open
+   ============================================================ */
+(function () {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxContent = document.getElementById("lightbox-content");
+  const lightboxClose = document.getElementById("lightbox-close");
+  if (!lightbox || !lightboxContent || !lightboxClose) return;
+
+  const closeLightbox = () => {
+    lightbox.classList.remove("open");
+    lightbox.setAttribute("aria-hidden", "true");
+    lightboxContent.innerHTML = "";
+    document.body.style.overflow = "";
+  };
+
+  const openImage = (src, alt) => {
+    lightboxContent.innerHTML = "";
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = alt || "";
+    lightboxContent.appendChild(img);
+    lightbox.classList.add("open");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  };
+
+  const openVideo = (src) => {
+    lightboxContent.innerHTML = "";
+    const video = document.createElement("video");
+    video.src = src;
+    video.controls = true;
+    video.autoplay = true;
+    video.playsInline = true;
+    lightboxContent.appendChild(video);
+    lightbox.classList.add("open");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  };
+
+  document.querySelectorAll('[data-lightbox="image"]').forEach((img) => {
+    img.addEventListener("click", () => openImage(img.getAttribute("src"), img.getAttribute("alt")));
+  });
+
+  document.querySelectorAll('[data-lightbox="video"]').forEach((video) => {
+    const wrap = video.closest(".media-wrap") || video;
+    wrap.addEventListener("click", () => openVideo(video.getAttribute("src")));
+    // hover preview
+    wrap.addEventListener("mouseenter", () => { try { video.play(); } catch (e) {} });
+    wrap.addEventListener("mouseleave", () => { try { video.pause(); video.currentTime = 0; } catch (e) {} });
+  });
+
+  lightboxClose.addEventListener("click", closeLightbox);
+  lightbox.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLightbox(); });
+})();
 
 document.querySelectorAll('.servico-header').forEach(header => {
   header.addEventListener('click', () => {
