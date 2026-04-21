@@ -165,7 +165,7 @@
   --azul-claro: #c6f6fa;
   --vinho-escuro: #54303b;
   --roxo-medio: #7b4f60;
-  --rosa-medio: #f8c6cc;
+  --creme: #e8dccc;
   --rosa-claro: #fce9ec;
   --preto: #000000;
   --cinza: #efefef;
@@ -183,42 +183,25 @@
   --letter-spacing-2: 2px;
 
   /* Escala de espaçamento baseada em 8px */
-  --space-1: 0.5rem;
-  /* 8px */
-  --space-2: 1rem;
-  /* 16px */
-  --space-3: 1.5rem;
-  /* 24px */
-  --space-4: 2rem;
-  /* 16px */
-  --space-5: 2.5rem;
-  /* 20px */
-  --space-6: 3rem;
-  /* 24px */
-  --space-7: 3.5rem;
-  /* 28px */
-  --space-8: 4rem;
-  /* 32px */
-  --space-9: 4.5rem;
-  /* 36px */
-  --space-10: 5rem;
-  /* 40px */
-  --space-11: 5.5rem;
-  /* 44px */
-  --space-12: 6rem;
-  /* 48px */
-  --space-13: 7rem;
-  /* 56px */
-  --space-14: 8rem;
-  /* 64px */
-  --space-16: 10rem;
-  /* 80px */
-  --space-20: 12rem;
-  /* 96px */
-  --space-24: 16rem;
-  /* 128px */
+  --space-1:  0.5rem;  /*   8px */
+  --space-2:  1rem;    /*  16px */
+  --space-3:  1.5rem;  /*  24px */
+  --space-4:  2rem;    /*  32px */
+  --space-5:  2.5rem;  /*  40px */
+  --space-6:  3rem;    /*  48px */
+  --space-7:  3.5rem;  /*  56px */
+  --space-8:  4rem;    /*  64px */
+  --space-9:  4.5rem;  /*  72px */
+  --space-10: 5rem;    /*  80px */
+  --space-11: 5.5rem;  /*  88px */
+  --space-12: 6rem;    /*  96px */
+  --space-13: 7rem;    /* 112px */
+  --space-14: 8rem;    /* 128px */
+  --space-16: 10rem;   /* 160px */
+  --space-20: 12rem;   /* 192px */
+  --space-24: 16rem;   /* 256px */
 
-    /* Pesos comuns */
+  /* Pesos */
   --font-thin: 100;
   --font-light: 300;
   --font-regular: 400;
@@ -226,17 +209,9 @@
   --font-bold: 700;
   --font-heavy: 900;
 
-  /* Font-family principal e secundária */
+  /* Famílias */
   --font-primary: 'Manier', 'Raleway', Arial, sans-serif;
   --font-secondary: 'Raleway', Arial, sans-serif;
-
-  /* Pesos comuns */
-  --font-thin: 100;
-  --font-light: 300;
-  --font-regular: 400;
-  --font-medium: 500;
-  --font-bold: 700;
-  --font-heavy: 900;
 
   /* Tipografia fluida */
   --font-size-sm: 0.9rem;
@@ -332,8 +307,8 @@ h6 {
 }
 
 .btn-purple {
-  border: 2px solid var(--rosa-medio);
-  color: var(--rosa-medio);
+  border: 2px solid var(--creme);
+  color: var(--creme);
 }
 
 .btn-purple:hover {
@@ -538,7 +513,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--rosa-medio);
+  color: var(--creme);
   transform: scale(1.1);
 }
 
@@ -1871,8 +1846,8 @@ header {
   background: var(--roxo-medio);
   opacity: .35;
 }
-.s-label.on-dark { color: var(--rosa-medio); }
-.s-label.on-dark::after { background: var(--rosa-medio); opacity: .35; }
+.s-label.on-dark { color: var(--creme); }
+.s-label.on-dark::after { background: var(--creme); opacity: .35; }
 
 /* HERO additions */
 .hero-eyebrow {
@@ -1946,8 +1921,8 @@ header {
 }
 .strip-item {
   padding: var(--space-3) var(--space-1);
-  border-right: 1px solid rgba(248, 198, 204, .12);
-  border-bottom: 1px solid rgba(248, 198, 204, .12);
+  border-right: 1px solid rgba(232, 220, 204, .12);
+  border-bottom: 1px solid rgba(232, 220, 204, .12);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -1961,14 +1936,14 @@ header {
   font-weight: var(--font-light);
   line-height: 1;
   letter-spacing: -.02em;
-  color: var(--rosa-medio);
+  color: var(--creme);
 }
 .strip-lab {
   font-size: 10px;
   font-weight: var(--font-bold);
   letter-spacing: var(--letter-spacing-2);
   text-transform: uppercase;
-  color: rgba(248, 198, 204, .65);
+  color: rgba(232, 220, 204, .65);
 }
 
 /* SOBRE */
@@ -2003,7 +1978,7 @@ header {
 }
 .sobre-pull .bar {
   width: 3px;
-  background: var(--rosa-medio);
+  background: var(--creme);
   flex-shrink: 0;
   opacity: .8;
 }
@@ -2100,7 +2075,7 @@ header {
   font-weight: var(--font-light);
   letter-spacing: .12em;
   text-transform: uppercase;
-  color: var(--rosa-medio);
+  color: var(--creme);
   margin-left: 8px;
   opacity: .85;
 }
@@ -2116,10 +2091,10 @@ header {
   margin: 0 auto;
 }
 .empresas-inner .s-label {
-  color: var(--rosa-medio);
+  color: var(--creme);
 }
 .empresas-inner .s-label::after {
-  background: var(--rosa-medio);
+  background: var(--creme);
 }
 .emp-grid {
   display: grid;
@@ -2144,7 +2119,7 @@ header {
   font-weight: var(--font-bold);
   letter-spacing: var(--letter-spacing-2);
   text-transform: uppercase;
-  color: var(--rosa-medio);
+  color: var(--creme);
   opacity: .75;
   margin-bottom: var(--space-2);
 }
@@ -2153,7 +2128,7 @@ header {
   font-size: clamp(36px, 6vw, 52px);
   font-weight: var(--font-light);
   line-height: 1;
-  color: var(--rosa-medio);
+  color: var(--creme);
   margin-bottom: var(--space-3);
   letter-spacing: -.02em;
 }
@@ -2168,7 +2143,7 @@ header {
 .emp-footer {
   margin-top: var(--space-3);
   padding-top: var(--space-2);
-  border-top: 1px solid rgba(248, 198, 204, .15);
+  border-top: 1px solid rgba(232, 220, 204, .15);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2179,7 +2154,7 @@ header {
   font-size: 11px;
   font-weight: var(--font-medium);
   letter-spacing: .14em;
-  color: var(--rosa-medio);
+  color: var(--creme);
   opacity: .85;
 }
 .emp-footer .btn {
@@ -2311,7 +2286,7 @@ header {
   align-items: center;
   justify-content: center;
   pointer-events: none;
-  color: var(--rosa-medio);
+  color: var(--creme);
   text-shadow: 0 2px 14px rgba(0, 0, 0, .35);
   font-size: 28px;
   opacity: .9;
@@ -2367,7 +2342,7 @@ header {
   transition: background .15s;
   border-radius: var(--radius-sm);
 }
-.work-row:hover { background: var(--rosa-medio); }
+.work-row:hover { background: var(--creme); }
 .wc {
   font-family: var(--font-primary);
   font-size: var(--font-size-base);
@@ -2394,7 +2369,7 @@ header {
 /* DEPOIMENTOS */
 .depoimentos {
   background: var(--vinho-escuro);
-  color: var(--rosa-medio);
+  color: var(--creme);
   padding: var(--space-10) var(--space-1);
 }
 .depo-inner {
@@ -2407,15 +2382,15 @@ header {
   gap: 2px;
 }
 .depo-card {
-  background: rgba(248, 198, 204, .06);
+  background: rgba(232, 220, 204, .06);
   padding: var(--space-4) var(--space-3);
   border-radius: var(--radius-sm);
 }
-.depo-card.span2 { background: rgba(248, 198, 204, .1); }
+.depo-card.span2 { background: rgba(232, 220, 204, .1); }
 .depo-q {
   font-family: var(--font-primary);
   font-size: 56px;
-  color: rgba(248, 198, 204, .25);
+  color: rgba(232, 220, 204, .25);
   line-height: .7;
   display: block;
   margin-bottom: 8px;
@@ -2425,19 +2400,19 @@ header {
   font-style: italic;
   font-size: var(--font-size-base);
   line-height: 1.65;
-  color: rgba(248, 198, 204, .9);
+  color: rgba(232, 220, 204, .9);
   margin-bottom: var(--space-2);
 }
 .depo-card.span2 .depo-text { font-size: var(--font-size-lg); }
 .depo-author {
   font-size: 13px;
   font-weight: var(--font-bold);
-  color: var(--rosa-medio);
+  color: var(--creme);
   letter-spacing: .04em;
 }
 .depo-role {
   font-size: 11px;
-  color: rgba(248, 198, 204, .5);
+  color: rgba(232, 220, 204, .5);
   margin-top: 3px;
   font-family: var(--font-secondary);
 }
@@ -2454,16 +2429,16 @@ header {
   font-size: 9.5px;
   letter-spacing: var(--letter-spacing-2);
   text-transform: uppercase;
-  color: rgba(248, 198, 204, .4);
+  color: rgba(232, 220, 204, .4);
 }
 .depo-ph-name {
   font-family: var(--font-primary);
   font-size: var(--font-size-base);
-  color: rgba(248, 198, 204, .65);
+  color: rgba(232, 220, 204, .65);
 }
 .depo-ph-role {
   font-size: 11px;
-  color: rgba(248, 198, 204, .4);
+  color: rgba(232, 220, 204, .4);
   font-family: var(--font-secondary);
 }
 
@@ -2560,7 +2535,7 @@ header {
 .pal-hl-dot {
   width: 5px;
   height: 5px;
-  background: var(--rosa-medio);
+  background: var(--creme);
   border-radius: 50%;
   flex-shrink: 0;
   margin-top: 8px;
@@ -2571,7 +2546,7 @@ header {
   line-height: 1.65;
   color: rgba(255, 255, 255, .82);
 }
-.pal-hl-text strong { color: var(--rosa-medio); font-weight: var(--font-bold); }
+.pal-hl-text strong { color: var(--creme); font-weight: var(--font-bold); }
 
 .pal-cta {
   padding-top: var(--space-2);
@@ -2622,7 +2597,7 @@ header {
   position: absolute;
   top: -42px;
   right: -2px;
-  color: var(--rosa-medio);
+  color: var(--creme);
   font-size: 28px;
   line-height: 1;
   background: none;
@@ -2674,4 +2649,162 @@ header {
 
   .hero-meta { gap: 8px; margin: var(--space-3) 0 var(--space-4); }
   .hero-meta-key { width: 90px; }
+}
+
+/* ============================================================
+   ACCESSIBILITY & SEMANTIC RESETS
+   Suporte para tags semânticas (dl/dt/dd, ul/li, blockquote, p,
+   address, figure) usadas no markup limpo. Mantém o visual
+   idêntico aos seletores antigos.
+   ============================================================ */
+
+/* Skip link — escondido até receber foco (a11y) */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: var(--azul-principal);
+  color: var(--branco);
+  padding: var(--space-1) var(--space-2);
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-bold);
+  z-index: 9999;
+  text-decoration: none;
+  border-radius: 0 0 var(--radius-sm) 0;
+  transition: top .15s ease;
+}
+.skip-link:focus { top: 0; outline: 2px solid var(--branco); outline-offset: 2px; }
+
+/* Reset margens em tags semânticas */
+main { display: block; }
+address { font-style: normal; }
+figure { margin: 0; }
+figcaption { display: block; }
+blockquote { margin: 0; quotes: none; }
+dl { margin: 0; }
+dt, dd { margin: 0; }
+
+/* Top-bar tag (substitui h5) */
+.top-bar-tag {
+  margin: 0;
+  width: 100%;
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-bold);
+  color: var(--branco);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Logo (link no header) */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* HERO meta (agora dl/dt/dd, mantém layout flex) */
+.hero-meta-row { display: flex; align-items: baseline; gap: var(--space-2); }
+
+/* CASE meta (agora dl/dt/dd, layout horizontal) */
+.case-meta { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+
+/* Listas semânticas que precisam zerar bullets */
+.work-rows,
+.topics,
+.pal-hl {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* WORK rows: spans agora precisam comportar-se como blocos para layout */
+.work-row .wc { display: block; }
+.work-row .wr { display: block; }
+.work-row .wr-country,
+.work-row .wr-scope { display: block; }
+
+/* CLIENTES eyebrow (substitui h5) e sub (substitui h4) */
+.clientes-eyebrow {
+  display: inline-block;
+  width: 100%;
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-bold);
+  letter-spacing: var(--letter-spacing-2);
+  color: var(--roxo-medio);
+  text-transform: uppercase;
+  text-align: center;
+  margin: var(--space-5) auto var(--space-1);
+}
+.clientes-sub {
+  text-align: center;
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-base);
+  color: var(--vinho-escuro);
+  font-weight: var(--font-bold);
+  line-height: 1.4;
+  width: 80%;
+  margin: 0 auto var(--space-5);
+}
+
+/* DEPOIMENTOS — figure agora envolve o card; manter padding */
+.depo-card figcaption { display: block; }
+.depo-card .depo-author,
+.depo-card .depo-role { display: block; }
+
+/* Empresas — eyebrow agora é <p> */
+.emp-eyebrow { margin: 0 0 var(--space-2); }
+
+/* Trajectory — head/title agora são <p> */
+.traj-head { margin: 0 0 var(--space-2); }
+.traj-title { margin: 0 0 var(--space-3); }
+
+/* Cases / Trabalhos / Depoimentos — eyebrow e cat agora <p> */
+.case-eyebrow,
+.work-cat,
+.s-label,
+.depo-soon,
+.depo-ph-name,
+.depo-ph-role { margin: 0 0 var(--space-1); }
+.s-label { display: inline-flex; }
+
+/* Lightbox: corpo travado quando aberto via classe (controlado em JS) */
+body.is-lightbox-open { overflow: hidden; }
+
+/* Footer — phone e address */
+.footer-phone {
+  display: block;
+  color: var(--branco);
+  text-decoration: none;
+  margin-bottom: var(--space-1);
+  font-family: var(--font-secondary);
+}
+.footer-rights p { margin: 0; }
+
+/* Reduced motion — respeita preferência de acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .clients-track-1,
+  .clients-track-2,
+  .clients-track-3 { animation: none !important; }
+}
+
+/* DESKTOP overrides for new semantic-cleanup classes */
+@media (min-width: 1024px) {
+  .clientes-eyebrow {
+    font-size: var(--font-size-sm);
+    margin: var(--space-5) 0 var(--space-2);
+  }
+  .clientes-sub {
+    font-size: var(--font-size-base);
+    width: 100%;
+    margin: 0 auto var(--space-5);
+  }
 }

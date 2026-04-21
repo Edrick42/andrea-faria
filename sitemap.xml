@@ -1,7 +1,18 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://andreafaria.marketing/</loc>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://andreafaria.marketing/assets/photos/hero.jpg</image:loc>
+      <image:title>Andréa Faria — Brand Strategist &amp; Founder</image:title>
+      <image:caption>Direção de marketing estratégico para líderes, marcas premium e empresas em expansão internacional.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://andreafaria.marketing/assets/photos/speaking-1.jpg</image:loc>
+      <image:title>Andréa Faria palestrando — Join Digital Meet, Joinville</image:title>
+    </image:image>
   </url>
 </urlset>
