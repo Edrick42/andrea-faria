@@ -166,7 +166,7 @@
   --vinho-escuro: #54303b;
   --roxo-medio: #7b4f60;
   --creme: #e8dccc;
-  --rosa-claro: #fce9ec;
+  --creme-claro: #f7f0e3;
   --preto: #000000;
   --cinza: #efefef;
   --branco: #ffffff;
@@ -1992,7 +1992,7 @@ header {
 }
 
 .traj {
-  background: var(--rosa-claro);
+  background: var(--creme-claro);
   padding: var(--space-4) var(--space-3);
   border-left: 3px solid var(--vinho-escuro);
 }
@@ -2294,7 +2294,7 @@ header {
 
 /* TRABALHOS */
 .trabalhos {
-  background: var(--rosa-claro);
+  background: var(--creme-claro);
   padding: var(--space-10) var(--space-1);
 }
 .trabalhos-inner {
@@ -2509,7 +2509,7 @@ header {
   transition: background .15s;
   border-radius: var(--radius-sm);
 }
-.topic:hover { background: var(--rosa-claro); }
+.topic:hover { background: var(--creme-claro); }
 .topic::before {
   content: '';
   width: 18px;
