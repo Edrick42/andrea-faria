@@ -458,7 +458,8 @@ hr {
   align-items: center;
   justify-content: end;
   margin: auto;
-  gap: 12px;
+  gap: 10px;
+  flex-wrap: nowrap;
 }
 
 .top-bar-right.scrolled {
@@ -469,38 +470,60 @@ hr {
 .lang-switch {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
   font-family: var(--font-secondary);
-  font-size: var(--font-size-sm);
-  font-weight: 600;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   color: var(--branco);
-  letter-spacing: 0.04em;
+  line-height: 1;
+  white-space: nowrap;
+  flex: 0 0 auto;
 }
 
 .lang-switch .lang-btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background: transparent;
-  border: none;
-  color: var(--branco);
-  opacity: 0.55;
-  padding: 4px 2px;
-  cursor: pointer;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  border-radius: 0;
+  margin: 0;
+  padding: 6px 3px 4px;
+  color: inherit;
   font: inherit;
   letter-spacing: inherit;
-  transition: opacity 0.2s ease;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.45;
+  transition: opacity 0.18s ease, border-color 0.18s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .lang-switch .lang-btn:hover {
   opacity: 1;
 }
 
+.lang-switch .lang-btn:focus {
+  outline: none;
+}
+
+.lang-switch .lang-btn:focus-visible {
+  outline: 1px solid var(--branco);
+  outline-offset: 2px;
+  opacity: 1;
+}
+
 .lang-switch .lang-btn.is-active {
   opacity: 1;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  border-bottom-color: currentColor;
 }
 
 .lang-switch .lang-sep {
-  opacity: 0.4;
+  opacity: 0.3;
+  font-weight: 400;
+  padding: 0 2px;
+  user-select: none;
 }
 
 .top-bar-right .call-btn:hover {
