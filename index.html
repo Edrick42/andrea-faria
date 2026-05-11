@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Especialista em branding, criação de marcas, audiovisual, social media e websites. Transformamos negócios em marcas desejadas, estratégicas e com alto valor percebido.">
+  <meta name="description" data-i18n-attr-content="meta.description" content="Especialista em branding, criação de marcas, audiovisual, social media e websites. Transformamos negócios em marcas desejadas, estratégicas e com alto valor percebido.">
 
-  <title>Branding, Audiovisual & Marketing Estratégico | Andréa Faria Marketing</title>
+  <title data-i18n="meta.title">Branding, Audiovisual & Marketing Estratégico | Andréa Faria Marketing</title>
 
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -21,10 +21,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 
-  <meta property="og:title" content="Andréa Faria Marketing — Branding, Marketing e Audiovisual">
-  <meta property="og:description" content="Construímos marcas desejadas, estratégicas e memoráveis.">
+  <link rel="alternate" hreflang="pt-BR" href="https://andreafaria.marketing/">
+  <link rel="alternate" hreflang="en" href="https://andreafaria.marketing/?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://andreafaria.marketing/">
+
+  <meta property="og:title" data-i18n-attr-content="meta.og.title" content="Andréa Faria Marketing — Branding, Marketing e Audiovisual">
+  <meta property="og:description" data-i18n-attr-content="meta.og.description" content="Construímos marcas desejadas, estratégicas e memoráveis.">
   <meta property="og:image" content="https://andreafaria.marketing/assets/images/andrea-faria-destaque.webp">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
   <meta property="og:url" content="https://andreafaria.marketing">
   <meta name="format-detection" content="telephone=no">
 
@@ -48,15 +54,22 @@
     <div class="top-bar-left">
       <img class="top-bar-mini-logo fade-toggle hidden desktop"
         src="./assets/logos/Andrea-Faria-Marketing-Logo-White.svg" alt="Andréa Faria" aria-hidden="true" loading="lazy">
-      <h5>Pronto para fazer a sua marca valer mais?</h5>
+      <h5 data-i18n="topbar.tag">Pronto para fazer a sua marca valer mais?</h5>
     </div>
     <div class="top-bar-right">
-      <button class="top-bar-hamburger fade-toggle hidden" aria-label="Open menu" aria-expanded="false"
+      <div class="lang-switch" role="group" aria-label="Language / Idioma">
+        <button type="button" class="lang-btn" data-lang-set="pt" aria-label="Português">PT</button>
+        <span class="lang-sep" aria-hidden="true">/</span>
+        <button type="button" class="lang-btn" data-lang-set="en" aria-label="English">EN</button>
+      </div>
+      <button class="top-bar-hamburger fade-toggle hidden" data-i18n-attr-aria-label="topbar.menu" aria-label="Open menu" aria-expanded="false"
         aria-controls="mobile-menu">
         <span class="hamburger"></span>
-      </button>      
+      </button>
       <a href="https://wa.me/5521972452742?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20reuni%C3%A3o%20para%20saber%20como%20podemos%20fortalecer%20minha%20marca"
-        class="btn btn-white desktop" target="_blank">Vamos Conversar
+        class="btn btn-white desktop" target="_blank"
+        data-i18n="cta.talk"
+        data-i18n-attr-href="wa.talk.url">Vamos Conversar
       </a>
     </div>
   </div>
@@ -64,10 +77,10 @@
     <hr class="mobile">
     <nav>
       <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#clientes">Clientes</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li><a href="#hero" data-i18n="nav.home">Home</a></li>
+        <li><a href="#servicos" data-i18n="nav.services">Serviços</a></li>
+        <li><a href="#clientes" data-i18n="nav.clients">Clientes</a></li>
+        <li><a href="#contato" data-i18n="nav.contact">Contato</a></li>
       </ul>
     </nav>
   </div>
@@ -80,10 +93,10 @@
     </div>
     <nav>
       <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#servicos">O que fazemos</a></li>
-        <li><a href="#clientes">Clientes</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li><a href="#hero" data-i18n="nav.home">Home</a></li>
+        <li><a href="#servicos" data-i18n="nav.whatWeDo">O que fazemos</a></li>
+        <li><a href="#clientes" data-i18n="nav.clients">Clientes</a></li>
+        <li><a href="#contato" data-i18n="nav.contact">Contato</a></li>
       </ul>
     </nav>
   </header>
@@ -106,12 +119,14 @@
     </div>
 
     <div class="hero-content">
-      <h1><span>Aqui nós fazemos</span><br> marcas virarem referência.</h1>
-      <p class="description">
+      <h1 data-i18n-html="hero.title"><span>Aqui nós fazemos</span><br> marcas virarem referência.</h1>
+      <p class="description" data-i18n="hero.description">
         Há mais de 10 anos unimos branding artesanal, estética refinada e marketing estratégico.
       </p>
       <a href="https://wa.me/5521972452742?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20reuni%C3%A3o%20para%20saber%20como%20podemos%20fortalecer%20minha%20marca"
-        class="btn btn-black mobile" target="_blank">Vamos Conversar
+        class="btn btn-black mobile" target="_blank"
+        data-i18n="cta.talk"
+        data-i18n-attr-href="wa.talk.url">Vamos Conversar
       </a>
     </div>
 
@@ -120,16 +135,16 @@
         <img class="hero-content-logo"
           src="./assets/icons/instagram-solid-black.svg" alt="Andréa Faria Marketing - Instagram" aria-hidden="true" loading="lazy">
       </a>
-      
+
       <a href="https://www.linkedin.com/company/andreafariamarketing/" target="_blank" aria-label="LinkedIn">
         <img class="hero-content-logo"
           src="./assets/icons/linkedin-in-solid-black.svg" alt="Andréa Faria Marketing - Instagram" aria-hidden="true" loading="lazy">
       </a>
-      
+
       <a href="https://wa.me/5521972452742" target="_blank" aria-label="What's App">
         <img class="hero-content-logo"
           src="./assets/icons/whatsapp-solid-black.svg" alt="Andréa Faria Marketing - What's App" aria-hidden="true" loading="lazy">
-      </a>    
+      </a>
     </div>
   </section>
 
@@ -139,153 +154,167 @@
     </video>
 
     <div class="cta-hero-top">
-      <h1>
+      <h1 data-i18n-html="ctaHero.title">
         Quando a marca vale mais, <br>
         o negócio cresce mais.
       </h1>
     </div>
     <div class="cta-hero-bottom">
       <a href="https://wa.me/5521972452742?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20reuni%C3%A3o%20para%20saber%20como%20podemos%20fortalecer%20minha%20marca"
-        class="btn btn-white" target="_blank">Agendar Reunião</a>
+        class="btn btn-white" target="_blank"
+        data-i18n="ctaHero.btn"
+        data-i18n-attr-href="wa.talk.url">Agendar Reunião</a>
     </div>
   </section>
 
   <section id="servicos" class="servicos">
-    <h2>O que fazemos</h2>
+    <h2 data-i18n="servicos.title">O que fazemos</h2>
 
     <div class="servicos-accordion">
       <div class="servico-item">
         <button class="servico-header" aria-expanded="false">
-          <span>Audiovisual</span>
+          <span data-i18n="serv.1.title">Audiovisual</span>
           <span class="icon">+</span>
         </button>
 
         <div class="servico-content">
           <div class="servico-content-left">
-            <p>
+            <p data-i18n="serv.1.p1">
               Criamos conteúdos estratégicos que elevam a percepção da sua marca, fortalecem sua autoridade e posicionam o seu negócio de forma mais profissional e atrativa no mercado.
             </p>
-            <p>
+            <p data-i18n="serv.1.p2">
               Cada peça é pensada para gerar conexão emocional, despertar desejo genuíno e conduzir o público a enxergar valor real no que você oferece.
             </p>
             <a href="https://wa.me/5521972452742?text=Tenho%20interesse%20em%20Audiovisual"
-              class="btn btn-white" target="_blank">
+              class="btn btn-white" target="_blank"
+              data-i18n="serv.1.btn"
+              data-i18n-attr-href="wa.serv1.url">
               Quero conteúdos estratégicos
             </a>
           </div>
 
           <div class="servicos-content-right">
-            <img src="./assets/images/andrea-faria-audio-visual.webp" alt="Produção audiovisual por Andréa Faria Marketing" loading="lazy">
+            <img src="./assets/images/andrea-faria-audio-visual.webp" data-i18n-attr-alt="serv.1.alt" alt="Produção audiovisual por Andréa Faria Marketing" loading="lazy">
           </div>
         </div>
       </div>
 
       <div class="servico-item">
         <button class="servico-header" aria-expanded="false">
-          <span>Criação de Marca</span>
+          <span data-i18n="serv.2.title">Criação de Marca</span>
           <span class="icon">+</span>
         </button>
 
         <div class="servico-content">
           <div class="servico-content-left">
-            <p>
+            <p data-i18n="serv.2.p1">
               Desenvolvemos identidades visuais que diferenciam sua marca no mercado, reforçam seu posicionamento e comunicam valor de forma clara e consistente.
             </p>
-            <p>
+            <p data-i18n="serv.2.p2">
               Cada detalhe é pensado para criar reconhecimento, gerar confiança e deixar uma marca forte e memorável na mente do público.
             </p>
             <a href="https://wa.me/5521972452742?text=Ol%C3%A1%2C%20Andr%C3%A9a%21%20Tenho%20interesse%20no%20servi%C3%A7o%20de%20Audiovisual.%20Gostaria%20de%20entender%20como%20podemos%20elevar%20a%20percep%C3%A7%C3%A3o%20da%20minha%20marca%20atrav%C3%A9s%20de%20conte%C3%BAdos%20visuais.%20Podemos%20conversar%3F"
-            class="btn btn-white" target="_blank">Quero uma marca forte</a>
+            class="btn btn-white" target="_blank"
+            data-i18n="serv.2.btn"
+            data-i18n-attr-href="wa.serv2.url">Quero uma marca forte</a>
           </div>
 
           <div class="servicos-content-right">
-            <img src="./assets/images/andrea-faria-criacao-de-marca.webp" alt="Identidade visual desenvolvida por Andréa Faria Marketing" loading="lazy">
+            <img src="./assets/images/andrea-faria-criacao-de-marca.webp" data-i18n-attr-alt="serv.2.alt" alt="Identidade visual desenvolvida por Andréa Faria Marketing" loading="lazy">
           </div>
         </div>
       </div>
 
       <div class="servico-item">
         <button class="servico-header" aria-expanded="false">
-          <span>Website</span>
+          <span data-i18n="serv.3.title">Website</span>
           <span class="icon">+</span>
         </button>
 
         <div class="servico-content">
             <div class="servico-content-left">
-            <p>
+            <p data-i18n="serv.3.p1">
               Desenvolvemos websites personalizados e modernos, pensados para refletir a essência da sua marca e oferecer uma experiência visual clara, intuitiva e envolvente.
             </p>
-            <p>  
+            <p data-i18n="serv.3.p2">
               Cada projeto é criado com foco em performance, usabilidade e conversão, transformando visitas em conexões reais e resultados concretos.
             </p>
             <a href="https://wa.me/5521972452742?text=Tenho%20interesse%20em%20Criação%20de%20Marca"
-              class="btn btn-white" target="_blank">
+              class="btn btn-white" target="_blank"
+              data-i18n="serv.3.btn"
+              data-i18n-attr-href="wa.serv3.url">
               Quero um website personalizado
             </a>
           </div>
 
           <div class="servicos-content-right">
-            <img src="./assets/images/andrea-faria-web-design.webp" alt="Projeto de website criado pela Andréa Faria Marketing" loading="lazy">
+            <img src="./assets/images/andrea-faria-web-design.webp" data-i18n-attr-alt="serv.3.alt" alt="Projeto de website criado pela Andréa Faria Marketing" loading="lazy">
           </div>
         </div>
       </div>
 
       <div class="servico-item">
         <button class="servico-header" aria-expanded="false">
-          <span>Social Media</span>
+          <span data-i18n="serv.4.title">Social Media</span>
           <span class="icon">+</span>
         </button>
 
         <div class="servico-content">
           <div class="servico-content-left">
-            <p>Criamos estratégias que atraem o público certo, geram engajamento consistente e fortalecem a autoridade da sua marca no mercado.</p>
-            <p>Cada ação é planejada para construir relevância, confiança e presença contínua, transformando atenção em relacionamento e crescimento.</p>
+            <p data-i18n="serv.4.p1">Criamos estratégias que atraem o público certo, geram engajamento consistente e fortalecem a autoridade da sua marca no mercado.</p>
+            <p data-i18n="serv.4.p2">Cada ação é planejada para construir relevância, confiança e presença contínua, transformando atenção em relacionamento e crescimento.</p>
             <a href="https://wa.me/5521972452742?text=Ol%C3%A1%2C%20Andr%C3%A9a%21%20Tenho%20interesse%20no%20servi%C3%A7o%20de%20Social%20Media.%20Gostaria%20de%20entender%20como%20podemos%20desenvolver%20uma%20estrat%C3%A9gia%20de%20conte%C3%BAdo%20que%20engaje%20meu%20p%C3%BAblico%20e%20aumente%20convers%C3%B5es%20para%20o%20meu%20neg%C3%B3cio.%20Podemos%20conversar%3F"
-            class="btn btn-white" target="_blank">Quero autoridade digital</a>
+            class="btn btn-white" target="_blank"
+            data-i18n="serv.4.btn"
+            data-i18n-attr-href="wa.serv4.url">Quero autoridade digital</a>
           </div>
 
           <div class="servicos-content-right">
-            <img src="./assets/images/andrea-faria-social-media.webp" alt="Gestão de redes sociais pela Andréa Faria Marketing" loading="lazy">
+            <img src="./assets/images/andrea-faria-social-media.webp" data-i18n-attr-alt="serv.4.alt" alt="Gestão de redes sociais pela Andréa Faria Marketing" loading="lazy">
           </div>
         </div>
       </div>
 
       <div class="servico-item">
         <button class="servico-header" aria-expanded="false">
-          <span>Marketing de Performance</span>
+          <span data-i18n="serv.5.title">Marketing de Performance</span>
           <span class="icon">+</span>
         </button>
 
         <div class="servico-content">
           <div class="servico-content-left">
-            <p>Criamos campanhas que alcançam as pessoas certas no momento ideal, potencializando resultados e maximizando o retorno sobre o investimento.</p>
-            <p>Cada estratégia é orientada por dados e performance, focada em gerar rentabilidade, escala e crescimento sustentável para o seu negócio.</p>
+            <p data-i18n="serv.5.p1">Criamos campanhas que alcançam as pessoas certas no momento ideal, potencializando resultados e maximizando o retorno sobre o investimento.</p>
+            <p data-i18n="serv.5.p2">Cada estratégia é orientada por dados e performance, focada em gerar rentabilidade, escala e crescimento sustentável para o seu negócio.</p>
             <a href="https://wa.me/5521972452742?text=Ol%C3%A1%2C%20Andr%C3%A9a%21%20Tenho%20interesse%20no%20servi%C3%A7o%20de%20Marketing%20de%20Performance.%20Gostaria%20de%20entender%20como%20podemos%20criar%20estrat%C3%A9gias%20orientadas%20a%20dados%20para%20aumentar%20resultados%2C%20otimizar%20investimentos%20e%20acelerar%20o%20crescimento%20do%20meu%20neg%C3%B3cio.%20Podemos%20conversar%3F"
-            class="btn btn-white" target="_blank">Quero Mais Performance</a>
+            class="btn btn-white" target="_blank"
+            data-i18n="serv.5.btn"
+            data-i18n-attr-href="wa.serv5.url">Quero Mais Performance</a>
           </div>
 
           <div class="servicos-content-right">
-            <img src="./assets/images/andrea-faria-marketing-de-performance.webp" alt="Marketing de performance realizado pela Andréa Faria Marketing" loading="lazy">
+            <img src="./assets/images/andrea-faria-marketing-de-performance.webp" data-i18n-attr-alt="serv.5.alt" alt="Marketing de performance realizado pela Andréa Faria Marketing" loading="lazy">
           </div>
         </div>
       </div>
 
       <div class="servico-item">
         <button class="servico-header" aria-expanded="false">
-          <span>Consultoria de Marketing</span>
+          <span data-i18n="serv.6.title">Consultoria de Marketing</span>
           <span class="icon">+</span>
         </button>
 
         <div class="servico-content">
           <div class="servico-content-left">
-            <p>Oferecemos direção estratégica para que sua marca cresça com clareza, consistência e propósito em cada decisão.</p>
-            <p>Cada passo é guiado por visão, dados e posicionamento, garantindo crescimento sustentável e alinhado aos seus objetivos.</p>
+            <p data-i18n="serv.6.p1">Oferecemos direção estratégica para que sua marca cresça com clareza, consistência e propósito em cada decisão.</p>
+            <p data-i18n="serv.6.p2">Cada passo é guiado por visão, dados e posicionamento, garantindo crescimento sustentável e alinhado aos seus objetivos.</p>
             <a href="https://wa.me/5521972452742?text=Ol%C3%A1%2C%20Andr%C3%A9a%21%20Tenho%20interesse%20no%20servi%C3%A7o%20de%20Consultoria%20de%20Marketing%20%26%20Neg%C3%B3cios.%20Gostaria%20de%20entender%20como%20podemos%20analisar%20meu%20cen%C3%A1rio%20atual%2C%20identificar%20oportunidades%20e%20desenv"
-            class="btn btn-white" target="_blank">Quero ajuda personalizada</a>
+            class="btn btn-white" target="_blank"
+            data-i18n="serv.6.btn"
+            data-i18n-attr-href="wa.serv6.url">Quero ajuda personalizada</a>
           </div>
 
           <div class="servicos-content-right">
-            <img src="./assets/images/andrea-faria-consultoria.webp" alt="Consultoria estratégica de marketing e negócios por Andréa Faria Marketing" loading="lazy">
+            <img src="./assets/images/andrea-faria-consultoria.webp" data-i18n-attr-alt="serv.6.alt" alt="Consultoria estratégica de marketing e negócios por Andréa Faria Marketing" loading="lazy">
           </div>
         </div>
       </div>
@@ -293,10 +322,10 @@
 
     <div class="servicos-cta">
       <div class="servicos-cta-left">
-        <h1>
+        <h1 data-i18n="servicos.cta.h">
           Trabalhamos com método, profundidade e direção estratégica.
         </h1>
-        <p>
+        <p data-i18n="servicos.cta.p">
           Temos a solução completa para o seu negócio: criamos a sua marca, produzimos seus vídeos e fotos,
           desenvolvemos o seu website e gerimos seus canais e campanhas de marketing com foco em performance e crescimento.
         </p>
@@ -304,17 +333,19 @@
 
       <div class="servicos-cta-right">
         <a href="https://wa.me/5521972452742?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20reuni%C3%A3o%20para%20saber%20como%20podemos%20fortalecer%20minha%20marca"
-          class="btn btn-white" target="_blank">Conheça Nosso Processo</a>
+          class="btn btn-white" target="_blank"
+          data-i18n="servicos.cta.btn"
+          data-i18n-attr-href="wa.talk.url">Conheça Nosso Processo</a>
       </div>
     </div>
   </section>
 
   <section id="clientes" class="our-clients-section">
     <div class="our-clients-container">
-      <h5>Nossos Clientes</h5>
-      <h2 class="desktop">Escolhida por marcas que valorizam experiência, estética e estratégia.</h2>
-      <h2 class="mobile">Marcas que valorizam experiência, estética e estratégia.</h2>
-      <h4>Temos experiência com marcas no Brasil e ao redor do mundo:</h4>
+      <h5 data-i18n="clientes.eyebrow">Nossos Clientes</h5>
+      <h2 class="desktop" data-i18n="clientes.h">Escolhida por marcas que valorizam experiência, estética e estratégia.</h2>
+      <h2 class="mobile" data-i18n="clientes.h.mobile">Marcas que valorizam experiência, estética e estratégia.</h2>
+      <h4 data-i18n="clientes.sub">Temos experiência com marcas no Brasil e ao redor do mundo:</h4>
 
       <div class="clients-carousel" aria-hidden="false">
         <div class="clients-track clients-track-1" aria-hidden="false">
@@ -430,41 +461,45 @@
     </div>
 
     <div class="our-clients-footer">
-      <h3>De marcas globais a negócios autorais. <br><br> Nosso trabalho começa pelo mesmo ponto: <strong>aumentar
+      <h3 data-i18n-html="clientes.footer.h">De marcas globais a negócios autorais. <br><br> Nosso trabalho começa pelo mesmo ponto: <strong>aumentar
           valor, visibilidade e
           desejo.</strong></h3>
       <a href="https://wa.me/5521972452742?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20reuni%C3%A3o%20para%20saber%20como%20podemos%20fortalecer%20minha%20marca"
-        class="btn btn-dark-purple" target="_blank">Vamos Conversar</a>
+        class="btn btn-dark-purple" target="_blank"
+        data-i18n="cta.talk"
+        data-i18n-attr-href="wa.talk.url">Vamos Conversar</a>
     </div>
   </section>
- 
+
   <section class="aqui-nos">
     <div class="aqui-nos-left">
-      <h2><span>Transformamos ideias</span><br> em experiências vivas.</h2>
+      <h2 data-i18n-html="aqui.l.title"><span>Transformamos ideias</span><br> em experiências vivas.</h2>
     </div>
     <div class="aqui-nos-center">
-      <h2><span>Criamos marcas</span><br> que inspiram.</h2>
+      <h2 data-i18n-html="aqui.c.title"><span>Criamos marcas</span><br> que inspiram.</h2>
     </div>
     <div class="aqui-nos-right">
-      <h2><span>Contamos histórias</span><br> que conectam e convertem.</h2>
+      <h2 data-i18n-html="aqui.r.title"><span>Contamos histórias</span><br> que conectam e convertem.</h2>
     </div>
   </section>
 
   <footer id="contato" class="footer">
     <div class="footer-content">
       <div class="footer-cta">
-        <h2>Vamos conversar sobre o próximo passo da sua marca?</h2>
+        <h2 data-i18n="footer.title">Vamos conversar sobre o próximo passo da sua marca?</h2>
 
         <div class="footer-cta">
           <a href="https://wa.me/5521972452742?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20reuni%C3%A3o%20para%20saber%20como%20podemos%20fortalecer%20minha%20marca"
-            class="btn btn-primary" target="_blank">
+            class="btn btn-primary" target="_blank"
+            data-i18n="footer.btn"
+            data-i18n-attr-href="wa.talk.url">
             Fale com a Andréa
           </a>
         </div>
       </div>
 
       <div class="footer-socials">
-        <a href="mailto:andrea@andrefariamkt.com">Email</a>
+        <a href="mailto:andrea@andrefariamkt.com" data-i18n="footer.email">Email</a>
         <a href="https://www.instagram.com/andreafaria.marketing/" target="_blank" aria-label="Instagram">
           Instagram
         </a>
@@ -478,7 +513,7 @@
 
       <div class="footer-rights">
         <p href="tel:+5521972452742">+55 21 97245-2742</p>
-        <p>&copy; 2024 Andréa Faria Marketing. <br> Todos os direitos reservados.</p>
+        <p data-i18n-html="footer.rights">&copy; 2024 Andréa Faria Marketing. <br> Todos os direitos reservados.</p>
       </div>
     </div>
 

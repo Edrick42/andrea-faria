@@ -458,10 +458,49 @@ hr {
   align-items: center;
   justify-content: end;
   margin: auto;
+  gap: 12px;
 }
 
 .top-bar-right.scrolled {
   transform: translateX(0px) translateY(0);
+}
+
+/* Switch de idioma PT/EN */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--branco);
+  letter-spacing: 0.04em;
+}
+
+.lang-switch .lang-btn {
+  background: transparent;
+  border: none;
+  color: var(--branco);
+  opacity: 0.55;
+  padding: 4px 2px;
+  cursor: pointer;
+  font: inherit;
+  letter-spacing: inherit;
+  transition: opacity 0.2s ease;
+}
+
+.lang-switch .lang-btn:hover {
+  opacity: 1;
+}
+
+.lang-switch .lang-btn.is-active {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.lang-switch .lang-sep {
+  opacity: 0.4;
 }
 
 .top-bar-right .call-btn:hover {
