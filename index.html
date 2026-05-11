@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Primary SEO -->
-  <title>Andréa Faria — Direção de Marketing Estratégico | Brasil · Índia · EUA</title>
-  <meta name="description" content="Andréa Faria é diretora de marketing estratégico para líderes, marcas premium e empresas em expansão internacional. Atua entre Brasil, Índia e Estados Unidos.">
+  <title data-i18n="meta.title">Andréa Faria — Direção de Marketing Estratégico | Brasil · Índia · EUA</title>
+  <meta name="description" data-i18n-attr-content="meta.description" content="Andréa Faria é diretora de marketing estratégico para líderes, marcas premium e empresas em expansão internacional. Atua entre Brasil, Índia e Estados Unidos.">
   <meta name="author" content="Andréa Faria">
-  <meta name="keywords" content="direção de marketing, brand strategist, marketing estratégico, posicionamento de marca, marketing para líderes, marketing internacional, Brasil, Índia, Estados Unidos, Andréa Faria, Factory, The Light of Diya, palestras de marketing">
+  <meta name="keywords" data-i18n-attr-content="meta.keywords" content="direção de marketing, brand strategist, marketing estratégico, posicionamento de marca, marketing para líderes, marketing internacional, Brasil, Índia, Estados Unidos, Andréa Faria, Factory, The Light of Diya, palestras de marketing">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="googlebot" content="index, follow">
   <meta name="theme-color" content="#0c667b">
@@ -21,6 +21,9 @@
 
   <!-- Canonical -->
   <link rel="canonical" href="https://andreafaria.marketing/">
+  <link rel="alternate" hreflang="pt-BR" href="https://andreafaria.marketing/">
+  <link rel="alternate" hreflang="en" href="https://andreafaria.marketing/?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://andreafaria.marketing/">
 
   <!-- Favicons & manifest -->
   <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
@@ -40,9 +43,10 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
   <meta property="og:site_name" content="Andréa Faria — Marketing Estratégico">
-  <meta property="og:title" content="Andréa Faria — Direção de Marketing Estratégico">
-  <meta property="og:description" content="Entro como diretora de marketing da sua empresa — estratégia, equipe e execução. Atuação entre Brasil, Índia e Estados Unidos.">
+  <meta property="og:title" data-i18n-attr-content="meta.og.title" content="Andréa Faria — Direção de Marketing Estratégico">
+  <meta property="og:description" data-i18n-attr-content="meta.og.description" content="Entro como diretora de marketing da sua empresa — estratégia, equipe e execução. Atuação entre Brasil, Índia e Estados Unidos.">
   <meta property="og:url" content="https://andreafaria.marketing/">
   <meta property="og:image" content="https://andreafaria.marketing/assets/photos/hero.jpg">
   <meta property="og:image:width" content="1200">
@@ -51,8 +55,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Andréa Faria — Direção de Marketing Estratégico">
-  <meta name="twitter:description" content="Entro como diretora de marketing da sua empresa — estratégia, equipe e execução. Brasil · Índia · EUA.">
+  <meta name="twitter:title" data-i18n-attr-content="meta.og.title" content="Andréa Faria — Direção de Marketing Estratégico">
+  <meta name="twitter:description" data-i18n-attr-content="meta.twitter.description" content="Entro como diretora de marketing da sua empresa — estratégia, equipe e execução. Brasil · Índia · EUA.">
   <meta name="twitter:image" content="https://andreafaria.marketing/assets/photos/hero.jpg">
   <meta name="twitter:image:alt" content="Andréa Faria — Brand Strategist & Founder">
 
@@ -118,7 +122,7 @@
         "@id": "https://andreafaria.marketing/#website",
         "url": "https://andreafaria.marketing/",
         "name": "Andréa Faria — Marketing Estratégico",
-        "inLanguage": "pt-BR",
+        "inLanguage": ["pt-BR", "en"],
         "publisher": { "@id": "https://andreafaria.marketing/#service" }
       }
     ]
@@ -127,52 +131,59 @@
 </head>
 
 <body>
-  <a class="skip-link" href="#hero">Pular para o conteúdo</a>
+  <a class="skip-link" href="#hero" data-i18n="skip">Pular para o conteúdo</a>
 
   <div class="top-bar" role="banner">
     <div class="top-bar-left">
       <img class="top-bar-mini-logo fade-toggle hidden desktop"
         src="assets/logos/Andrea-Faria-Marketing-Logo-White.svg"
         alt="" width="120" height="20" loading="lazy" decoding="async">
-      <p class="top-bar-tag">Brand Strategist · Direção de Marketing</p>
+      <p class="top-bar-tag" data-i18n="topbar.tag">Brand Strategist · Direção de Marketing</p>
     </div>
     <div class="top-bar-right">
+      <div class="lang-switch" role="group" aria-label="Language / Idioma">
+        <button type="button" class="lang-btn" data-lang-set="pt" aria-label="Português">PT</button>
+        <span class="lang-sep" aria-hidden="true">/</span>
+        <button type="button" class="lang-btn" data-lang-set="en" aria-label="English">EN</button>
+      </div>
       <button class="top-bar-hamburger fade-toggle hidden" type="button"
-        aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+        data-i18n-attr-aria-label="topbar.menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
         <span class="hamburger" aria-hidden="true"></span>
       </button>
       <a href="https://wa.me/5521972452742?text=Ol%C3%A1%2C%20Andr%C3%A9a%21%20Gostaria%20de%20conversar%20sobre%20dire%C3%A7%C3%A3o%20de%20marketing%20para%20o%20meu%20neg%C3%B3cio."
-        class="btn btn-white desktop" target="_blank" rel="noopener">Vamos Conversar</a>
+        class="btn btn-white desktop" target="_blank" rel="noopener"
+        data-i18n="cta.talk"
+        data-i18n-attr-href="wa.talk.url">Vamos Conversar</a>
     </div>
   </div>
 
   <div id="mobile-menu" class="top-bar-bottom hidden">
     <hr class="mobile">
-    <nav aria-label="Menu principal mobile">
+    <nav data-i18n-attr-aria-label="topbar.menuNav" aria-label="Menu principal mobile">
       <ul>
-        <li><a href="#hero">Início</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#cases">Cases</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li><a href="#hero" data-i18n="nav.home">Início</a></li>
+        <li><a href="#sobre" data-i18n="nav.about">Sobre</a></li>
+        <li><a href="#servicos" data-i18n="nav.services">Serviços</a></li>
+        <li><a href="#cases" data-i18n="nav.cases">Cases</a></li>
+        <li><a href="#contato" data-i18n="nav.contact">Contato</a></li>
       </ul>
     </nav>
   </div>
 
   <header class="desktop">
     <div class="header-left">
-      <a href="#hero" class="logo" aria-label="Andréa Faria — Início">
+      <a href="#hero" class="logo" data-i18n-attr-aria-label="header.logoAria" aria-label="Andréa Faria — Início">
         <img src="assets/logos/Andrea-Faria-Marketing-Logo-Logo-Tipo.svg"
           alt="Andréa Faria Marketing" width="160" height="40" loading="eager" decoding="async">
       </a>
     </div>
-    <nav aria-label="Menu principal">
+    <nav data-i18n-attr-aria-label="header.navAria" aria-label="Menu principal">
       <ul>
-        <li><a href="#hero">Início</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#cases">Cases</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li><a href="#hero" data-i18n="nav.home">Início</a></li>
+        <li><a href="#sobre" data-i18n="nav.about">Sobre</a></li>
+        <li><a href="#servicos" data-i18n="nav.services">Serviços</a></li>
+        <li><a href="#cases" data-i18n="nav.cases">Cases</a></li>
+        <li><a href="#contato" data-i18n="nav.contact">Contato</a></li>
       </ul>
     </nav>
   </header>
@@ -181,39 +192,41 @@
     <!-- HERO -->
     <section id="hero" class="hero" aria-labelledby="hero-title">
       <div class="hero-content-right mobile">
-        <a href="https://www.instagram.com/andreafaria.marketing/" target="_blank" rel="noopener" aria-label="Instagram da Andréa Faria">
+        <a href="https://www.instagram.com/andreafaria.marketing/" target="_blank" rel="noopener" data-i18n-attr-aria-label="social.instagramAria" aria-label="Instagram da Andréa Faria">
           <img class="hero-content-logo" src="assets/icons/instagram-solid-black.svg" alt="" width="40" height="40" loading="lazy" decoding="async">
         </a>
-        <a href="https://www.linkedin.com/company/andreafariamarketing/" target="_blank" rel="noopener" aria-label="LinkedIn da Andréa Faria">
+        <a href="https://www.linkedin.com/company/andreafariamarketing/" target="_blank" rel="noopener" data-i18n-attr-aria-label="social.linkedinAria" aria-label="LinkedIn da Andréa Faria">
           <img class="hero-content-logo" src="assets/icons/linkedin-in-solid-black.svg" alt="" width="40" height="40" loading="lazy" decoding="async">
         </a>
-        <a href="https://wa.me/5521972452742" target="_blank" rel="noopener" aria-label="WhatsApp da Andréa Faria">
+        <a href="https://wa.me/5521972452742" target="_blank" rel="noopener" data-i18n-attr-aria-label="social.whatsappAria" aria-label="WhatsApp da Andréa Faria">
           <img class="hero-content-logo" src="assets/icons/whatsapp-solid-black.svg" alt="" width="40" height="40" loading="lazy" decoding="async">
         </a>
       </div>
 
       <div class="hero-content">
-        <span class="hero-eyebrow">Andréa Faria · Marketing Estratégico</span>
-        <h1 id="hero-title"><span>Brand Strategist</span><br>&amp; Founder.</h1>
-        <p class="description">
+        <span class="hero-eyebrow" data-i18n="hero.eyebrow">Andréa Faria · Marketing Estratégico</span>
+        <h1 id="hero-title" data-i18n-html="hero.title"><span>Brand Strategist</span><br>&amp; Founder.</h1>
+        <p class="description" data-i18n="hero.description">
           Entro no seu negócio como diretora de marketing — sem você precisar contratar uma equipe interna. Estruturo como sua marca é percebida, organizo a comunicação, defino a estratégia e executo com time próprio.
         </p>
         <dl class="hero-meta">
-          <div class="hero-meta-row"><dt class="hero-meta-key">Opera em</dt><dd class="hero-meta-val">Brasil · Índia · EUA</dd></div>
-          <div class="hero-meta-row"><dt class="hero-meta-key">Idiomas</dt><dd class="hero-meta-val">Português &amp; Inglês</dd></div>
+          <div class="hero-meta-row"><dt class="hero-meta-key" data-i18n="hero.meta.locKey">Opera em</dt><dd class="hero-meta-val" data-i18n="hero.meta.locVal">Brasil · Índia · EUA</dd></div>
+          <div class="hero-meta-row"><dt class="hero-meta-key" data-i18n="hero.meta.langKey">Idiomas</dt><dd class="hero-meta-val" data-i18n-html="hero.meta.langVal">Português &amp; Inglês</dd></div>
         </dl>
         <a href="https://wa.me/5521972452742?text=Ol%C3%A1%2C%20Andr%C3%A9a%21%20Gostaria%20de%20conversar%20sobre%20dire%C3%A7%C3%A3o%20de%20marketing%20para%20o%20meu%20neg%C3%B3cio."
-          class="btn btn-black mobile" target="_blank" rel="noopener">Vamos Conversar</a>
+          class="btn btn-black mobile" target="_blank" rel="noopener"
+          data-i18n="cta.talk"
+          data-i18n-attr-href="wa.talk.url">Vamos Conversar</a>
       </div>
 
       <div class="hero-content-right desktop">
-        <a href="https://www.instagram.com/andreafaria.marketing/" target="_blank" rel="noopener" aria-label="Instagram da Andréa Faria">
+        <a href="https://www.instagram.com/andreafaria.marketing/" target="_blank" rel="noopener" data-i18n-attr-aria-label="social.instagramAria" aria-label="Instagram da Andréa Faria">
           <img class="hero-content-logo" src="assets/icons/instagram-solid-black.svg" alt="" width="40" height="40" loading="lazy" decoding="async">
         </a>
-        <a href="https://www.linkedin.com/company/andreafariamarketing/" target="_blank" rel="noopener" aria-label="LinkedIn da Andréa Faria">
+        <a href="https://www.linkedin.com/company/andreafariamarketing/" target="_blank" rel="noopener" data-i18n-attr-aria-label="social.linkedinAria" aria-label="LinkedIn da Andréa Faria">
           <img class="hero-content-logo" src="assets/icons/linkedin-in-solid-black.svg" alt="" width="40" height="40" loading="lazy" decoding="async">
         </a>
-        <a href="https://wa.me/5521972452742" target="_blank" rel="noopener" aria-label="WhatsApp da Andréa Faria">
+        <a href="https://wa.me/5521972452742" target="_blank" rel="noopener" data-i18n-attr-aria-label="social.whatsappAria" aria-label="WhatsApp da Andréa Faria">
           <img class="hero-content-logo" src="assets/icons/whatsapp-solid-black.svg" alt="" width="40" height="40" loading="lazy" decoding="async">
         </a>
       </div>
@@ -225,50 +238,52 @@
         <source src="assets/videos/Andrea-Faria-Marketing.mov" type="video/mp4">
       </video>
       <div class="cta-hero-top">
-        <h2 id="cta-hero-title">
+        <h2 id="cta-hero-title" data-i18n-html="ctaHero.title">
           Entro como diretora de marketing<br>
           da sua empresa.
         </h2>
       </div>
       <div class="cta-hero-bottom">
         <a href="https://wa.me/5521972452742?text=Ol%C3%A1%2C%20Andr%C3%A9a%21%20Gostaria%20de%20agendar%20uma%20reuni%C3%A3o."
-          class="btn btn-white" target="_blank" rel="noopener">Agendar Reunião</a>
+          class="btn btn-white" target="_blank" rel="noopener"
+          data-i18n="ctaHero.btn"
+          data-i18n-attr-href="wa.meet.url">Agendar Reunião</a>
       </div>
     </section>
 
     <!-- STRIP / STATS -->
-    <section class="strip" aria-label="Indicadores">
-      <div class="strip-item"><span class="strip-val">10+</span><span class="strip-lab">Anos de Carreira</span></div>
-      <div class="strip-item"><span class="strip-val">50+</span><span class="strip-lab">Clientes Atendidos</span></div>
-      <div class="strip-item"><span class="strip-val">2</span><span class="strip-lab">Empresas</span></div>
-      <div class="strip-item"><span class="strip-val">8</span><span class="strip-lab">Países</span></div>
-      <div class="strip-item"><span class="strip-val">PT&nbsp;·&nbsp;EN</span><span class="strip-lab">Idiomas</span></div>
+    <section class="strip" data-i18n-attr-aria-label="strip.aria" aria-label="Indicadores">
+      <div class="strip-item"><span class="strip-val">10+</span><span class="strip-lab" data-i18n="strip.years">Anos de Carreira</span></div>
+      <div class="strip-item"><span class="strip-val">50+</span><span class="strip-lab" data-i18n="strip.clients">Clientes Atendidos</span></div>
+      <div class="strip-item"><span class="strip-val">2</span><span class="strip-lab" data-i18n="strip.companies">Empresas</span></div>
+      <div class="strip-item"><span class="strip-val">8</span><span class="strip-lab" data-i18n="strip.countries">Países</span></div>
+      <div class="strip-item"><span class="strip-val">PT&nbsp;·&nbsp;EN</span><span class="strip-lab" data-i18n="strip.languages">Idiomas</span></div>
     </section>
 
     <!-- SOBRE -->
     <section id="sobre" class="sobre" aria-labelledby="sobre-title">
       <div class="sobre-inner">
-        <h2 id="sobre-title" class="s-label">Sobre</h2>
+        <h2 id="sobre-title" class="s-label" data-i18n="sobre.label">Sobre</h2>
         <div class="sobre-grid">
           <div class="sobre-text">
-            <p>Atuo na interseção entre estratégia de marca, direção de marketing e visão de negócios — com foco em líderes de mercado, marcas premium e empresas internacionais.</p>
-            <p>Com 20 anos comecei a trabalhar no Mama Shelter Rio — uma grande rede internacional do grupo Accor. Foi lá que percebi que o mundo é grande e que deve ser conhecido. Aprendi marketing na prática, fundei minha empresa e sou movida por conhecer novas culturas e ajudar no desenvolvimento de negócios e marcas.</p>
-            <p>Hoje dirijo duas empresas e atendo clientes no Brasil, na Índia e nos Estados Unidos. Com quase quatro anos vivendo e fazendo negócios na Índia, trago uma compreensão prática do mercado indiano que vai muito além da pesquisa.</p>
+            <p data-i18n="sobre.p1">Atuo na interseção entre estratégia de marca, direção de marketing e visão de negócios — com foco em líderes de mercado, marcas premium e empresas internacionais.</p>
+            <p data-i18n="sobre.p2">Com 20 anos comecei a trabalhar no Mama Shelter Rio — uma grande rede internacional do grupo Accor. Foi lá que percebi que o mundo é grande e que deve ser conhecido. Aprendi marketing na prática, fundei minha empresa e sou movida por conhecer novas culturas e ajudar no desenvolvimento de negócios e marcas.</p>
+            <p data-i18n="sobre.p3">Hoje dirijo duas empresas e atendo clientes no Brasil, na Índia e nos Estados Unidos. Com quase quatro anos vivendo e fazendo negócios na Índia, trago uma compreensão prática do mercado indiano que vai muito além da pesquisa.</p>
             <blockquote class="sobre-pull">
               <span class="bar" aria-hidden="true"></span>
-              <p>"A maioria das agências entende de plataforma. Eu entendo de negócio e de como a sua marca deve ser percebida."</p>
+              <p data-i18n="sobre.quote">"A maioria das agências entende de plataforma. Eu entendo de negócio e de como a sua marca deve ser percebida."</p>
             </blockquote>
           </div>
-          <aside class="traj" aria-label="Trajetória profissional">
-            <p class="traj-head">Trajetória</p>
-            <p class="traj-title">De onde vim</p>
+          <aside class="traj" data-i18n-attr-aria-label="traj.aria" aria-label="Trajetória profissional">
+            <p class="traj-head" data-i18n="traj.head">Trajetória</p>
+            <p class="traj-title" data-i18n="traj.title">De onde vim</p>
             <ul class="traj-list">
-              <li><span class="traj-dot" aria-hidden="true"></span>Formação em <strong>Análise de Marketing Digital</strong> — Rio de Janeiro</li>
-              <li><span class="traj-dot" aria-hidden="true"></span>Departamento de marketing do <strong>Mama Shelter Rio</strong> — grupo Accor</li>
-              <li><span class="traj-dot" aria-hidden="true"></span>Fundei minha primeira empresa <strong>aos 20 anos</strong></li>
-              <li><span class="traj-dot" aria-hidden="true"></span><strong>1º lugar</strong> — Desafio Empreender, Instituto Cyrela</li>
-              <li><span class="traj-dot" aria-hidden="true"></span>Palestrante — <strong>Join Digital Meet</strong>, Joinville · Experiência do Consumidor</li>
-              <li><span class="traj-dot" aria-hidden="true"></span>Operando entre <strong>Brasil e Índia</strong> desde 2022</li>
+              <li><span class="traj-dot" aria-hidden="true"></span><span data-i18n-html="traj.1">Formação em <strong>Análise de Marketing Digital</strong> — Rio de Janeiro</span></li>
+              <li><span class="traj-dot" aria-hidden="true"></span><span data-i18n-html="traj.2">Departamento de marketing do <strong>Mama Shelter Rio</strong> — grupo Accor</span></li>
+              <li><span class="traj-dot" aria-hidden="true"></span><span data-i18n-html="traj.3">Fundei minha primeira empresa <strong>aos 20 anos</strong></span></li>
+              <li><span class="traj-dot" aria-hidden="true"></span><span data-i18n-html="traj.4"><strong>1º lugar</strong> — Desafio Empreender, Instituto Cyrela</span></li>
+              <li><span class="traj-dot" aria-hidden="true"></span><span data-i18n-html="traj.5">Palestrante — <strong>Join Digital Meet</strong>, Joinville · Experiência do Consumidor</span></li>
+              <li><span class="traj-dot" aria-hidden="true"></span><span data-i18n-html="traj.6">Operando entre <strong>Brasil e Índia</strong> desde 2022</span></li>
             </ul>
           </aside>
         </div>
@@ -276,114 +291,122 @@
     </section>
 
     <!-- PARA QUEM (using aqui-nos pattern with motion) -->
-    <section class="aqui-nos" aria-label="Para quem trabalho">
+    <section class="aqui-nos" data-i18n-attr-aria-label="aqui.aria" aria-label="Para quem trabalho">
       <div class="aqui-nos-left">
-        <span class="aqui-nos-tag">Para líderes</span>
-        <h2><span>Posiciono você</span><br>como autoridade no seu mercado.</h2>
-        <p class="aqui-nos-p">Para que as pessoas certas te encontrem antes de você precisar se apresentar.</p>
+        <span class="aqui-nos-tag" data-i18n="aqui.l.tag">Para líderes</span>
+        <h2 data-i18n-html="aqui.l.title"><span>Posiciono você</span><br>como autoridade no seu mercado.</h2>
+        <p class="aqui-nos-p" data-i18n="aqui.l.p">Para que as pessoas certas te encontrem antes de você precisar se apresentar.</p>
       </div>
       <div class="aqui-nos-center">
-        <span class="aqui-nos-tag">Para empresas</span>
-        <h2><span>Organizo o marketing</span><br>como função estratégica.</h2>
-        <p class="aqui-nos-p">Para que sua empresa pare de depender de improviso e passe a crescer com consistência.</p>
+        <span class="aqui-nos-tag" data-i18n="aqui.c.tag">Para empresas</span>
+        <h2 data-i18n-html="aqui.c.title"><span>Organizo o marketing</span><br>como função estratégica.</h2>
+        <p class="aqui-nos-p" data-i18n="aqui.c.p">Para que sua empresa pare de depender de improviso e passe a crescer com consistência.</p>
       </div>
       <div class="aqui-nos-right">
-        <span class="aqui-nos-tag">Para novos mercados</span>
-        <h2><span>Abro portas</span><br>no Brasil ou na Índia.</h2>
-        <p class="aqui-nos-p">Com quem já opera nos dois — encurtando anos de tentativa e erro.</p>
+        <span class="aqui-nos-tag" data-i18n="aqui.r.tag">Para novos mercados</span>
+        <h2 data-i18n-html="aqui.r.title"><span>Abro portas</span><br>no Brasil ou na Índia.</h2>
+        <p class="aqui-nos-p" data-i18n="aqui.r.p">Com quem já opera nos dois — encurtando anos de tentativa e erro.</p>
       </div>
     </section>
 
     <!-- SERVIÇOS -->
     <section id="servicos" class="servicos" aria-labelledby="servicos-title">
-      <h2 id="servicos-title">O que fazemos juntos</h2>
+      <h2 id="servicos-title" data-i18n="servicos.title">O que fazemos juntos</h2>
 
       <div class="servicos-accordion">
         <div class="servico-item">
           <button class="servico-header" type="button" aria-expanded="false" aria-controls="serv-1">
-            <span>Direção de Marketing</span>
+            <span data-i18n="serv.1.title">Direção de Marketing</span>
             <span class="icon" aria-hidden="true">+</span>
           </button>
           <div id="serv-1" class="servico-content">
             <div class="servico-content-left">
-              <p>Entro como diretora de marketing da sua empresa — estratégia, equipe e execução. Você foca no negócio enquanto eu estruturo a forma como sua marca é percebida, organizo a comunicação e dirijo o time.</p>
-              <p>Atuação contínua e dedicada, com método e responsabilidade — sem o custo de uma estrutura interna.</p>
+              <p data-i18n="serv.1.p1">Entro como diretora de marketing da sua empresa — estratégia, equipe e execução. Você foca no negócio enquanto eu estruturo a forma como sua marca é percebida, organizo a comunicação e dirijo o time.</p>
+              <p data-i18n="serv.1.p2">Atuação contínua e dedicada, com método e responsabilidade — sem o custo de uma estrutura interna.</p>
               <a href="https://wa.me/5521972452742?text=Tenho%20interesse%20em%20Dire%C3%A7%C3%A3o%20de%20Marketing"
-                class="btn btn-white" target="_blank" rel="noopener">Quero direção estratégica</a>
+                class="btn btn-white" target="_blank" rel="noopener"
+                data-i18n="serv.1.btn"
+                data-i18n-attr-href="wa.serv1.url">Quero direção estratégica</a>
             </div>
             <div class="servicos-content-right">
-              <img src="assets/images/andrea-faria-consultoria.webp" alt="Andréa Faria conduzindo reunião de direção de marketing" width="800" height="600" loading="lazy" decoding="async">
+              <img src="assets/images/andrea-faria-consultoria.webp" data-i18n-attr-alt="serv.1.alt" alt="Andréa Faria conduzindo reunião de direção de marketing" width="800" height="600" loading="lazy" decoding="async">
             </div>
           </div>
         </div>
 
         <div class="servico-item">
           <button class="servico-header" type="button" aria-expanded="false" aria-controls="serv-2">
-            <span>Consultoria &amp; Estruturação</span>
+            <span data-i18n-html="serv.2.title">Consultoria &amp; Estruturação</span>
             <span class="icon" aria-hidden="true">+</span>
           </button>
           <div id="serv-2" class="servico-content">
             <div class="servico-content-left">
-              <p>Diagnóstico estratégico, direcionamento e construção de departamento de marketing — do zero ou com equipe existente.</p>
-              <p>Para empresas que querem sair do improviso e construir uma operação de marketing com método, indicadores e profundidade.</p>
+              <p data-i18n="serv.2.p1">Diagnóstico estratégico, direcionamento e construção de departamento de marketing — do zero ou com equipe existente.</p>
+              <p data-i18n="serv.2.p2">Para empresas que querem sair do improviso e construir uma operação de marketing com método, indicadores e profundidade.</p>
               <a href="https://wa.me/5521972452742?text=Tenho%20interesse%20em%20Consultoria%20de%20Marketing"
-                class="btn btn-white" target="_blank" rel="noopener">Quero estruturar meu marketing</a>
+                class="btn btn-white" target="_blank" rel="noopener"
+                data-i18n="serv.2.btn"
+                data-i18n-attr-href="wa.serv2.url">Quero estruturar meu marketing</a>
             </div>
             <div class="servicos-content-right">
-              <img src="assets/images/andrea-faria-marketing-de-performance.webp" alt="Mesa de trabalho com plano estratégico de marketing" width="800" height="600" loading="lazy" decoding="async">
+              <img src="assets/images/andrea-faria-marketing-de-performance.webp" data-i18n-attr-alt="serv.2.alt" alt="Mesa de trabalho com plano estratégico de marketing" width="800" height="600" loading="lazy" decoding="async">
             </div>
           </div>
         </div>
 
         <div class="servico-item">
           <button class="servico-header" type="button" aria-expanded="false" aria-controls="serv-3">
-            <span>Marca &amp; Posicionamento <small>· via Factory</small></span>
+            <span data-i18n-html="serv.3.title">Marca &amp; Posicionamento <small>· via Factory</small></span>
             <span class="icon" aria-hidden="true">+</span>
           </button>
           <div id="serv-3" class="servico-content">
             <div class="servico-content-left">
-              <p>Criação de marca e estruturação de autoridade para empresas e líderes que precisam ser vistos do jeito certo.</p>
-              <p>Trabalho conduzido pela Factory — método pelo qual fundadores e executivos deixam de ser invisíveis, sem depender de trends ou improviso.</p>
+              <p data-i18n="serv.3.p1">Criação de marca e estruturação de autoridade para empresas e líderes que precisam ser vistos do jeito certo.</p>
+              <p data-i18n="serv.3.p2">Trabalho conduzido pela Factory — método pelo qual fundadores e executivos deixam de ser invisíveis, sem depender de trends ou improviso.</p>
               <a href="https://wa.me/5521972452742?text=Tenho%20interesse%20em%20Marca%20%26%20Posicionamento%20%28Factory%29"
-                class="btn btn-white" target="_blank" rel="noopener">Quero ser visto do jeito certo</a>
+                class="btn btn-white" target="_blank" rel="noopener"
+                data-i18n="serv.3.btn"
+                data-i18n-attr-href="wa.serv3.url">Quero ser visto do jeito certo</a>
             </div>
             <div class="servicos-content-right">
-              <img src="assets/images/andrea-faria-criacao-de-marca.webp" alt="Identidade visual de marca desenvolvida pela Factory" width="800" height="600" loading="lazy" decoding="async">
+              <img src="assets/images/andrea-faria-criacao-de-marca.webp" data-i18n-attr-alt="serv.3.alt" alt="Identidade visual de marca desenvolvida pela Factory" width="800" height="600" loading="lazy" decoding="async">
             </div>
           </div>
         </div>
 
         <div class="servico-item">
           <button class="servico-header" type="button" aria-expanded="false" aria-controls="serv-4">
-            <span>Conteúdo &amp; Produção Visual <small>· via The Light of Diya</small></span>
+            <span data-i18n-html="serv.4.title">Conteúdo &amp; Produção Visual <small>· via The Light of Diya</small></span>
             <span class="icon" aria-hidden="true">+</span>
           </button>
           <div id="serv-4" class="servico-content">
             <div class="servico-content-left">
-              <p>Estratégia de conteúdo, direção criativa e audiovisual para marcas premium e hospitalidade.</p>
-              <p>Onde o trabalho de produção visual encontra sua expressão mais natural — com audiência real de 22K no segmento.</p>
+              <p data-i18n="serv.4.p1">Estratégia de conteúdo, direção criativa e audiovisual para marcas premium e hospitalidade.</p>
+              <p data-i18n="serv.4.p2">Onde o trabalho de produção visual encontra sua expressão mais natural — com audiência real de 22K no segmento.</p>
               <a href="https://wa.me/5521972452742?text=Tenho%20interesse%20em%20Conte%C3%BAdo%20%26%20Produ%C3%A7%C3%A3o%20Visual%20%28The%20Light%20of%20Diya%29"
-                class="btn btn-white" target="_blank" rel="noopener">Quero conteúdo de marca</a>
+                class="btn btn-white" target="_blank" rel="noopener"
+                data-i18n="serv.4.btn"
+                data-i18n-attr-href="wa.serv4.url">Quero conteúdo de marca</a>
             </div>
             <div class="servicos-content-right">
-              <img src="assets/images/andrea-faria-audio-visual.webp" alt="Produção audiovisual em set de marca premium" width="800" height="600" loading="lazy" decoding="async">
+              <img src="assets/images/andrea-faria-audio-visual.webp" data-i18n-attr-alt="serv.4.alt" alt="Produção audiovisual em set de marca premium" width="800" height="600" loading="lazy" decoding="async">
             </div>
           </div>
         </div>
 
         <div class="servico-item">
           <button class="servico-header" type="button" aria-expanded="false" aria-controls="serv-5">
-            <span>Expansão &amp; Palestras</span>
+            <span data-i18n-html="serv.5.title">Expansão &amp; Palestras</span>
             <span class="icon" aria-hidden="true">+</span>
           </button>
           <div id="serv-5" class="servico-content">
             <div class="servico-content-left">
-              <p>Introdução da sua empresa no mercado brasileiro ou indiano — com quem já opera nos dois.</p>
-              <p>Palestras, treinamentos e eventos corporativos sobre estratégia de marca, marketing internacional e a relação Brasil–Índia.</p>
-              <a href="#palestras" class="btn btn-white">Conhecer palestras</a>
+              <p data-i18n="serv.5.p1">Introdução da sua empresa no mercado brasileiro ou indiano — com quem já opera nos dois.</p>
+              <p data-i18n="serv.5.p2">Palestras, treinamentos e eventos corporativos sobre estratégia de marca, marketing internacional e a relação Brasil–Índia.</p>
+              <a href="#palestras" class="btn btn-white" data-i18n="serv.5.btn">Conhecer palestras</a>
             </div>
             <div class="servicos-content-right">
-              <img src="assets/photos/speaking-1.jpg" alt="Andréa Faria palestrando no Join Digital Meet em Joinville" width="800" height="600" loading="lazy" decoding="async">
+              <img src="assets/photos/speaking-1.jpg" data-i18n-attr-alt="serv.5.alt" alt="Andréa Faria palestrando no Join Digital Meet em Joinville" width="800" height="600" loading="lazy" decoding="async">
             </div>
           </div>
         </div>
@@ -391,12 +414,14 @@
 
       <div class="servicos-cta">
         <div class="servicos-cta-left">
-          <h2>Direção de marketing com método, profundidade e visão de negócios.</h2>
-          <p>Para líderes de mercado, marcas premium e empresas em expansão internacional. Estratégia de marca, gestão de marketing e produção visual — com time próprio e entrega consistente.</p>
+          <h2 data-i18n="servicos.cta.h">Direção de marketing com método, profundidade e visão de negócios.</h2>
+          <p data-i18n="servicos.cta.p">Para líderes de mercado, marcas premium e empresas em expansão internacional. Estratégia de marca, gestão de marketing e produção visual — com time próprio e entrega consistente.</p>
         </div>
         <div class="servicos-cta-right">
           <a href="https://wa.me/5521972452742?text=Ol%C3%A1%2C%20Andr%C3%A9a%21%20Gostaria%20de%20entender%20o%20m%C3%A9todo%20de%20trabalho."
-            class="btn btn-white" target="_blank" rel="noopener">Conhecer o Método</a>
+            class="btn btn-white" target="_blank" rel="noopener"
+            data-i18n="servicos.cta.btn"
+            data-i18n-attr-href="wa.method.url">Conhecer o Método</a>
         </div>
       </div>
     </section>
@@ -404,31 +429,31 @@
     <!-- EMPRESAS -->
     <section class="empresas" aria-labelledby="empresas-title">
       <div class="empresas-inner">
-        <h2 id="empresas-title" class="s-label on-dark">Minhas Empresas</h2>
+        <h2 id="empresas-title" class="s-label on-dark" data-i18n="empresas.title">Minhas Empresas</h2>
         <div class="emp-grid">
           <article class="emp-card factory" aria-labelledby="emp-factory">
             <div>
-              <p class="emp-eyebrow">Authority Structure</p>
+              <p class="emp-eyebrow" data-i18n="emp.factory.eyebrow">Authority Structure</p>
               <h3 id="emp-factory" class="emp-name">Factory</h3>
-              <p class="emp-text">Estruturação de autoridade digital para líderes e empresas. Estratégia de marca, posicionamento e gestão de presença — com processo, equipe dedicada e entrega consistente.</p>
-              <p class="emp-text">A Factory não é uma agência de social media. É o método pelo qual fundadores e executivos deixam de ser invisíveis — sem depender de trends ou improviso.</p>
+              <p class="emp-text" data-i18n="emp.factory.t1">Estruturação de autoridade digital para líderes e empresas. Estratégia de marca, posicionamento e gestão de presença — com processo, equipe dedicada e entrega consistente.</p>
+              <p class="emp-text" data-i18n="emp.factory.t2">A Factory não é uma agência de social media. É o método pelo qual fundadores e executivos deixam de ser invisíveis — sem depender de trends ou improviso.</p>
             </div>
             <div class="emp-footer">
               <span class="emp-handle">@factory.structure</span>
-              <a href="https://instagram.com/factory.structure" target="_blank" rel="noopener" class="btn btn-white" aria-label="Conhecer Factory no Instagram">Conhecer →</a>
+              <a href="https://instagram.com/factory.structure" target="_blank" rel="noopener" class="btn btn-white" data-i18n="emp.factory.btn" data-i18n-attr-aria-label="emp.factory.aria" aria-label="Conhecer Factory no Instagram">Conhecer →</a>
             </div>
           </article>
 
           <article class="emp-card diya" aria-labelledby="emp-diya">
             <div>
-              <p class="emp-eyebrow">Editorial · Hospitalidade</p>
+              <p class="emp-eyebrow" data-i18n="emp.diya.eyebrow">Editorial · Hospitalidade</p>
               <h3 id="emp-diya" class="emp-name"><em>The Light<br>of Diya</em></h3>
-              <p class="emp-text">Um projeto editorial nascido da experiência de viver entre culturas. Gastronomia, viagens, hospitalidade e as histórias que vivem nos entre-lugares.</p>
-              <p class="emp-text">Onde o trabalho de conteúdo e produção visual para marcas de hospitalidade encontra sua expressão mais natural — com audiência real de 22K no segmento.</p>
+              <p class="emp-text" data-i18n="emp.diya.t1">Um projeto editorial nascido da experiência de viver entre culturas. Gastronomia, viagens, hospitalidade e as histórias que vivem nos entre-lugares.</p>
+              <p class="emp-text" data-i18n="emp.diya.t2">Onde o trabalho de conteúdo e produção visual para marcas de hospitalidade encontra sua expressão mais natural — com audiência real de 22K no segmento.</p>
             </div>
             <div class="emp-footer">
               <span class="emp-handle">@the.light.of.diya</span>
-              <a href="https://instagram.com/the.light.of.diya" target="_blank" rel="noopener" class="btn btn-white" aria-label="Conhecer The Light of Diya no Instagram">Conhecer →</a>
+              <a href="https://instagram.com/the.light.of.diya" target="_blank" rel="noopener" class="btn btn-white" data-i18n="emp.diya.btn" data-i18n-attr-aria-label="emp.diya.aria" aria-label="Conhecer The Light of Diya no Instagram">Conhecer →</a>
             </div>
           </article>
         </div>
@@ -438,27 +463,27 @@
     <!-- CASES -->
     <section id="cases" class="cases" aria-labelledby="cases-title">
       <div class="cases-inner">
-        <p class="s-label">Cases em destaque</p>
-        <h2 id="cases-title" class="cases-h">Marcas que <em>cresceram</em> do nosso lado.</h2>
+        <p class="s-label" data-i18n="cases.label">Cases em destaque</p>
+        <h2 id="cases-title" class="cases-h" data-i18n-html="cases.h">Marcas que <em>cresceram</em> do nosso lado.</h2>
 
         <article class="case-block" aria-labelledby="case-metiers">
           <div class="case-text">
-            <p class="case-eyebrow">Case · 4 anos</p>
+            <p class="case-eyebrow" data-i18n="case.metiers.eyebrow">Case · 4 anos</p>
             <h3 id="case-metiers" class="case-name">Metiers Café</h3>
             <dl class="case-meta">
-              <div class="case-meta-item"><dt class="lab">Mercado</dt><dd class="val">Rio de Janeiro</dd></div>
-              <div class="case-meta-item"><dt class="lab">Escopo</dt><dd class="val">Branding · Marketing · Campanhas</dd></div>
-              <div class="case-meta-item"><dt class="lab">Período</dt><dd class="val">2020 — Presente</dd></div>
+              <div class="case-meta-item"><dt class="lab" data-i18n="case.lab.market">Mercado</dt><dd class="val">Rio de Janeiro</dd></div>
+              <div class="case-meta-item"><dt class="lab" data-i18n="case.lab.scope">Escopo</dt><dd class="val" data-i18n="case.metiers.scope">Branding · Marketing · Campanhas</dd></div>
+              <div class="case-meta-item"><dt class="lab" data-i18n="case.lab.period">Período</dt><dd class="val" data-i18n="case.metiers.period">2020 — Presente</dd></div>
             </dl>
-            <p class="case-desc">Quatro anos dirigindo marca, marketing e campanhas do Metiers Café — da construção de posicionamento à execução de conteúdo audiovisual. Acompanhamos a marca crescer de projeto local a referência em cafés especiais.</p>
-            <p class="case-desc">"A curiosidade e a vontade de aprender que ela tem realmente me surpreende cada vez mais. A gente foi crescendo juntos — tanto ela quanto o Métier." — Chris Gursching, fundadora.</p>
+            <p class="case-desc" data-i18n="case.metiers.d1">Quatro anos dirigindo marca, marketing e campanhas do Metiers Café — da construção de posicionamento à execução de conteúdo audiovisual. Acompanhamos a marca crescer de projeto local a referência em cafés especiais.</p>
+            <p class="case-desc" data-i18n="case.metiers.d2">"A curiosidade e a vontade de aprender que ela tem realmente me surpreende cada vez mais. A gente foi crescendo juntos — tanto ela quanto o Métier." — Chris Gursching, fundadora.</p>
           </div>
           <div class="case-media">
-            <img src="assets/cases/metiers/shot-1.jpg" alt="Ambiente do Metiers Café no Rio de Janeiro" width="800" height="600" loading="lazy" decoding="async" class="span-2" data-lightbox="image">
-            <img src="assets/cases/metiers/shot-3.jpg" alt="Café especial sendo preparado no Metiers Café" width="600" height="600" loading="lazy" decoding="async" data-lightbox="image">
-            <img src="assets/cases/metiers/shot-7.jpg" alt="Detalhe de mesa servida no Metiers Café" width="600" height="600" loading="lazy" decoding="async" data-lightbox="image">
+            <img src="assets/cases/metiers/shot-1.jpg" data-i18n-attr-alt="case.metiers.alt1" alt="Ambiente do Metiers Café no Rio de Janeiro" width="800" height="600" loading="lazy" decoding="async" class="span-2" data-lightbox="image">
+            <img src="assets/cases/metiers/shot-3.jpg" data-i18n-attr-alt="case.metiers.alt2" alt="Café especial sendo preparado no Metiers Café" width="600" height="600" loading="lazy" decoding="async" data-lightbox="image">
+            <img src="assets/cases/metiers/shot-7.jpg" data-i18n-attr-alt="case.metiers.alt3" alt="Detalhe de mesa servida no Metiers Café" width="600" height="600" loading="lazy" decoding="async" data-lightbox="image">
             <div class="media-wrap span-2">
-              <video src="assets/cases/metiers/video-1.mp4" muted loop playsinline preload="metadata" data-lightbox="video" aria-label="Vídeo de campanha do Metiers Café"></video>
+              <video src="assets/cases/metiers/video-1.mp4" muted loop playsinline preload="metadata" data-lightbox="video" data-i18n-attr-aria-label="case.metiers.vid" aria-label="Vídeo de campanha do Metiers Café"></video>
               <span class="play-indicator" aria-hidden="true">▶</span>
             </div>
           </div>
@@ -466,44 +491,44 @@
 
         <article class="case-block reverse" aria-labelledby="case-arroz">
           <div class="case-media">
-            <img src="assets/cases/casa-do-arroz/hero.webp" alt="Foto principal da marca Casa do Arroz" width="800" height="600" loading="lazy" decoding="async" class="span-2" data-lightbox="image">
+            <img src="assets/cases/casa-do-arroz/hero.webp" data-i18n-attr-alt="case.arroz.alt1" alt="Foto principal da marca Casa do Arroz" width="800" height="600" loading="lazy" decoding="async" class="span-2" data-lightbox="image">
             <div class="media-wrap">
-              <video src="assets/cases/casa-do-arroz/video-1.mp4" muted loop playsinline preload="metadata" data-lightbox="video" aria-label="Vídeo de campanha da Casa do Arroz"></video>
+              <video src="assets/cases/casa-do-arroz/video-1.mp4" muted loop playsinline preload="metadata" data-lightbox="video" data-i18n-attr-aria-label="case.arroz.vid1" aria-label="Vídeo de campanha da Casa do Arroz"></video>
               <span class="play-indicator" aria-hidden="true">▶</span>
             </div>
             <div class="media-wrap">
-              <video src="assets/cases/casa-do-arroz/video-3.mp4" muted loop playsinline preload="metadata" data-lightbox="video" aria-label="Vídeo de produção da Casa do Arroz"></video>
+              <video src="assets/cases/casa-do-arroz/video-3.mp4" muted loop playsinline preload="metadata" data-lightbox="video" data-i18n-attr-aria-label="case.arroz.vid2" aria-label="Vídeo de produção da Casa do Arroz"></video>
               <span class="play-indicator" aria-hidden="true">▶</span>
             </div>
           </div>
           <div class="case-text">
-            <p class="case-eyebrow">Case · Dept. de Marketing</p>
+            <p class="case-eyebrow" data-i18n="case.arroz.eyebrow">Case · Dept. de Marketing</p>
             <h3 id="case-arroz" class="case-name">Casa do Arroz</h3>
             <dl class="case-meta">
-              <div class="case-meta-item"><dt class="lab">Mercado</dt><dd class="val">Brasil</dd></div>
-              <div class="case-meta-item"><dt class="lab">Escopo</dt><dd class="val">Dept. de Marketing · Campanhas · Audiovisual</dd></div>
+              <div class="case-meta-item"><dt class="lab" data-i18n="case.lab.market">Mercado</dt><dd class="val" data-i18n="case.arroz.market">Brasil</dd></div>
+              <div class="case-meta-item"><dt class="lab" data-i18n="case.lab.scope">Escopo</dt><dd class="val" data-i18n="case.arroz.scope">Dept. de Marketing · Campanhas · Audiovisual</dd></div>
             </dl>
-            <p class="case-desc">Estruturação do departamento de marketing e direção de campanhas multi-formato. Produção audiovisual completa — do conceito criativo à execução — posicionando a Casa do Arroz como referência em tradição gastronômica contemporânea.</p>
-            <p class="case-desc">Marketing dirigido com consistência: campanhas sazonais, conteúdo de marca e presença digital trabalhando juntos, com método.</p>
+            <p class="case-desc" data-i18n="case.arroz.d1">Estruturação do departamento de marketing e direção de campanhas multi-formato. Produção audiovisual completa — do conceito criativo à execução — posicionando a Casa do Arroz como referência em tradição gastronômica contemporânea.</p>
+            <p class="case-desc" data-i18n="case.arroz.d2">Marketing dirigido com consistência: campanhas sazonais, conteúdo de marca e presença digital trabalhando juntos, com método.</p>
           </div>
         </article>
 
         <article class="case-block" aria-labelledby="case-frutos">
           <div class="case-text">
-            <p class="case-eyebrow">Case · Marca &amp; Marketing</p>
+            <p class="case-eyebrow" data-i18n="case.frutos.eyebrow">Case · Marca &amp; Marketing</p>
             <h3 id="case-frutos" class="case-name">Frutos</h3>
             <dl class="case-meta">
-              <div class="case-meta-item"><dt class="lab">Mercado</dt><dd class="val">Brasil</dd></div>
-              <div class="case-meta-item"><dt class="lab">Escopo</dt><dd class="val">Marca · Gestão de Marketing · Conteúdo</dd></div>
+              <div class="case-meta-item"><dt class="lab" data-i18n="case.lab.market">Mercado</dt><dd class="val" data-i18n="case.frutos.market">Brasil</dd></div>
+              <div class="case-meta-item"><dt class="lab" data-i18n="case.lab.scope">Escopo</dt><dd class="val" data-i18n="case.frutos.scope">Marca · Gestão de Marketing · Conteúdo</dd></div>
             </dl>
-            <p class="case-desc">Construção de marca e gestão de marketing para Frutos — do posicionamento visual à estratégia de conteúdo. Marca natural, limpa e com identidade própria num segmento saturado por genéricos.</p>
-            <p class="case-desc">Direção criativa de ponta a ponta: fotografia de produto, sensorialidade visual e linguagem de marca coerente em todos os pontos de contato.</p>
+            <p class="case-desc" data-i18n="case.frutos.d1">Construção de marca e gestão de marketing para Frutos — do posicionamento visual à estratégia de conteúdo. Marca natural, limpa e com identidade própria num segmento saturado por genéricos.</p>
+            <p class="case-desc" data-i18n="case.frutos.d2">Direção criativa de ponta a ponta: fotografia de produto, sensorialidade visual e linguagem de marca coerente em todos os pontos de contato.</p>
           </div>
           <div class="case-media">
-            <img src="assets/cases/frutos/shot-1.jpg" alt="Direção fotográfica de produto Frutos" width="600" height="600" loading="lazy" decoding="async" data-lightbox="image">
-            <img src="assets/cases/frutos/shot-2.jpg" alt="Identidade visual da marca Frutos" width="600" height="600" loading="lazy" decoding="async" data-lightbox="image">
+            <img src="assets/cases/frutos/shot-1.jpg" data-i18n-attr-alt="case.frutos.alt1" alt="Direção fotográfica de produto Frutos" width="600" height="600" loading="lazy" decoding="async" data-lightbox="image">
+            <img src="assets/cases/frutos/shot-2.jpg" data-i18n-attr-alt="case.frutos.alt2" alt="Identidade visual da marca Frutos" width="600" height="600" loading="lazy" decoding="async" data-lightbox="image">
             <div class="media-wrap span-2">
-              <video src="assets/cases/frutos/video.mp4" muted loop playsinline preload="metadata" data-lightbox="video" aria-label="Vídeo de marca Frutos"></video>
+              <video src="assets/cases/frutos/video.mp4" muted loop playsinline preload="metadata" data-lightbox="video" data-i18n-attr-aria-label="case.frutos.vid" aria-label="Vídeo de marca Frutos"></video>
               <span class="play-indicator" aria-hidden="true">▶</span>
             </div>
           </div>
@@ -514,12 +539,12 @@
     <!-- CLIENTES carousel -->
     <section id="clientes" class="our-clients-section" aria-labelledby="clientes-title">
       <div class="our-clients-container">
-        <p class="clientes-eyebrow">Nossos Clientes</p>
-        <h2 id="clientes-title" class="desktop">Marcas que valorizam experiência, estética e estratégia.</h2>
-        <h2 class="mobile">Marcas que valorizam experiência e estratégia.</h2>
-        <p class="clientes-sub">Trabalhos com marcas no Brasil, na Índia e ao redor do mundo:</p>
+        <p class="clientes-eyebrow" data-i18n="clientes.eyebrow">Nossos Clientes</p>
+        <h2 id="clientes-title" class="desktop" data-i18n="clientes.h">Marcas que valorizam experiência, estética e estratégia.</h2>
+        <h2 class="mobile" data-i18n="clientes.h.mobile">Marcas que valorizam experiência e estratégia.</h2>
+        <p class="clientes-sub" data-i18n="clientes.sub">Trabalhos com marcas no Brasil, na Índia e ao redor do mundo:</p>
 
-        <div class="clients-carousel" aria-label="Logos de clientes em carrossel" role="region">
+        <div class="clients-carousel" data-i18n-attr-aria-label="clientes.carouselAria" aria-label="Logos de clientes em carrossel" role="region">
           <div class="clients-track clients-track-1" aria-hidden="true">
             <div class="client-logo-container"><img src="assets/clients/metiers-cafe.jpg" alt="Metiers Café" width="120" height="100" loading="lazy" decoding="async"></div>
             <div class="client-logo-container"><img src="assets/clients/casa-do-arroz.jpg" alt="Casa do Arroz" width="120" height="100" loading="lazy" decoding="async"></div>
@@ -563,38 +588,38 @@
       </div>
 
       <div class="our-clients-footer">
-        <h3>De marcas globais a negócios autorais. <br><br> O ponto em comum: <strong>aumentar valor, visibilidade e desejo</strong> com método.</h3>
-        <a href="#contato" class="btn btn-dark-purple">Vamos Conversar</a>
+        <h3 data-i18n-html="clientes.footer.h">De marcas globais a negócios autorais. <br><br> O ponto em comum: <strong>aumentar valor, visibilidade e desejo</strong> com método.</h3>
+        <a href="#contato" class="btn btn-dark-purple" data-i18n="cta.talk">Vamos Conversar</a>
       </div>
     </section>
 
     <!-- TRABALHOS -->
     <section id="trabalhos" class="trabalhos" aria-labelledby="trabalhos-title">
       <div class="trabalhos-inner">
-        <p class="s-label">Trabalhos Selecionados</p>
-        <h2 id="trabalhos-title" class="trab-h">Marcas e líderes que <em>confiam</em>.</h2>
+        <p class="s-label" data-i18n="trabalhos.label">Trabalhos Selecionados</p>
+        <h2 id="trabalhos-title" class="trab-h" data-i18n-html="trabalhos.h">Marcas e líderes que <em>confiam</em>.</h2>
         <div class="work-cols">
           <div>
-            <p class="work-cat">Marca, Estratégia &amp; Gestão de Marketing</p>
+            <p class="work-cat" data-i18n-html="work.col1.title">Marca, Estratégia &amp; Gestão de Marketing</p>
             <ul class="work-rows">
-              <li class="work-row"><span class="wc">Helem Franceschini</span><span class="wr"><span class="wr-country">Brasil</span><span class="wr-scope">Marca · Leader Page · Leader Structure</span></span></li>
-              <li class="work-row"><span class="wc">Nayara Pimentel</span><span class="wr"><span class="wr-country">Brasil</span><span class="wr-scope">Marca Pessoal · Leader Structure</span></span></li>
-              <li class="work-row"><span class="wc">Metiers Café</span><span class="wr"><span class="wr-country">Brasil · 4 anos</span><span class="wr-scope">Branding · Marketing · Campanhas</span></span></li>
-              <li class="work-row"><span class="wc">Casa do Arroz</span><span class="wr"><span class="wr-country">Brasil</span><span class="wr-scope">Dept. de Marketing · Campanhas</span></span></li>
-              <li class="work-row"><span class="wc">Frutos</span><span class="wr"><span class="wr-country">Brasil</span><span class="wr-scope">Marca · Gestão de Marketing</span></span></li>
-              <li class="work-row"><span class="wc">Legible Ledgers</span><span class="wr"><span class="wr-country">EUA</span><span class="wr-scope">Marca · Website · LinkedIn</span></span></li>
-              <li class="work-row"><span class="wc">Busy Builders</span><span class="wr"><span class="wr-country">EUA</span><span class="wr-scope">Marca · LinkedIn</span></span></li>
+              <li class="work-row"><span class="wc">Helem Franceschini</span><span class="wr"><span class="wr-country" data-i18n="country.br">Brasil</span><span class="wr-scope" data-i18n="work.helem.scope">Marca · Leader Page · Leader Structure</span></span></li>
+              <li class="work-row"><span class="wc">Nayara Pimentel</span><span class="wr"><span class="wr-country" data-i18n="country.br">Brasil</span><span class="wr-scope" data-i18n="work.nayara.scope">Marca Pessoal · Leader Structure</span></span></li>
+              <li class="work-row"><span class="wc">Metiers Café</span><span class="wr"><span class="wr-country" data-i18n="work.metiers.country">Brasil · 4 anos</span><span class="wr-scope" data-i18n="work.metiers.scope">Branding · Marketing · Campanhas</span></span></li>
+              <li class="work-row"><span class="wc">Casa do Arroz</span><span class="wr"><span class="wr-country" data-i18n="country.br">Brasil</span><span class="wr-scope" data-i18n="work.arroz.scope">Dept. de Marketing · Campanhas</span></span></li>
+              <li class="work-row"><span class="wc">Frutos</span><span class="wr"><span class="wr-country" data-i18n="country.br">Brasil</span><span class="wr-scope" data-i18n="work.frutos.scope">Marca · Gestão de Marketing</span></span></li>
+              <li class="work-row"><span class="wc">Legible Ledgers</span><span class="wr"><span class="wr-country" data-i18n="country.us">EUA</span><span class="wr-scope" data-i18n="work.ledgers.scope">Marca · Website · LinkedIn</span></span></li>
+              <li class="work-row"><span class="wc">Busy Builders</span><span class="wr"><span class="wr-country" data-i18n="country.us">EUA</span><span class="wr-scope" data-i18n="work.builders.scope">Marca · LinkedIn</span></span></li>
             </ul>
           </div>
           <div>
-            <p class="work-cat">Hospitalidade &amp; Produção Visual</p>
+            <p class="work-cat" data-i18n-html="work.col2.title">Hospitalidade &amp; Produção Visual</p>
             <ul class="work-rows">
-              <li class="work-row"><span class="wc">Hilton Bangalore</span><span class="wr"><span class="wr-country">Índia</span><span class="wr-scope">Produção Visual · Conteúdo</span></span></li>
-              <li class="work-row"><span class="wc">Sheraton Bangalore</span><span class="wr"><span class="wr-country">Índia</span><span class="wr-scope">Produção Visual · Conteúdo</span></span></li>
-              <li class="work-row"><span class="wc">Angsana Bangalore</span><span class="wr"><span class="wr-country">Índia</span><span class="wr-scope">Produção Visual · Conteúdo</span></span></li>
-              <li class="work-row"><span class="wc">Memories of China</span><span class="wr"><span class="wr-country">Taj MG Road · Índia</span><span class="wr-scope">Direção Fotográfica</span></span></li>
-              <li class="work-row"><span class="wc">Lazy Suzy</span><span class="wr"><span class="wr-country">Índia</span><span class="wr-scope">Conteúdo · Produção Visual</span></span></li>
-              <li class="work-row"><span class="wc">Loya</span><span class="wr"><span class="wr-country">Índia</span><span class="wr-scope">Conteúdo · Produção Visual</span></span></li>
+              <li class="work-row"><span class="wc">Hilton Bangalore</span><span class="wr"><span class="wr-country" data-i18n="country.in">Índia</span><span class="wr-scope" data-i18n="work.hilton.scope">Produção Visual · Conteúdo</span></span></li>
+              <li class="work-row"><span class="wc">Sheraton Bangalore</span><span class="wr"><span class="wr-country" data-i18n="country.in">Índia</span><span class="wr-scope" data-i18n="work.sheraton.scope">Produção Visual · Conteúdo</span></span></li>
+              <li class="work-row"><span class="wc">Angsana Bangalore</span><span class="wr"><span class="wr-country" data-i18n="country.in">Índia</span><span class="wr-scope" data-i18n="work.angsana.scope">Produção Visual · Conteúdo</span></span></li>
+              <li class="work-row"><span class="wc">Memories of China</span><span class="wr"><span class="wr-country" data-i18n="work.china.country">Taj MG Road · Índia</span><span class="wr-scope" data-i18n="work.china.scope">Direção Fotográfica</span></span></li>
+              <li class="work-row"><span class="wc">Lazy Suzy</span><span class="wr"><span class="wr-country" data-i18n="country.in">Índia</span><span class="wr-scope" data-i18n="work.lazy.scope">Conteúdo · Produção Visual</span></span></li>
+              <li class="work-row"><span class="wc">Loya</span><span class="wr"><span class="wr-country" data-i18n="country.in">Índia</span><span class="wr-scope" data-i18n="work.loya.scope">Conteúdo · Produção Visual</span></span></li>
             </ul>
           </div>
         </div>
@@ -604,28 +629,28 @@
     <!-- DEPOIMENTOS -->
     <section class="depoimentos" aria-labelledby="depo-title">
       <div class="depo-inner">
-        <h2 id="depo-title" class="s-label on-dark">O que dizem os clientes</h2>
+        <h2 id="depo-title" class="s-label on-dark" data-i18n="depo.title">O que dizem os clientes</h2>
         <div class="depo-grid">
           <figure class="depo-card span2">
             <span class="depo-q" aria-hidden="true">"</span>
-            <blockquote class="depo-text">"Andréa é uma profissional que entende profundamente o negócio, respeita a essência do cliente e conduz o trabalho com sensibilidade e estratégia. Minha marca finalmente representa o nível profissional que eu sempre quis transmitir — e isso me permite ter tranquilidade para continuar crescendo."</blockquote>
+            <blockquote class="depo-text" data-i18n="depo.nayara.text">"Andréa é uma profissional que entende profundamente o negócio, respeita a essência do cliente e conduz o trabalho com sensibilidade e estratégia. Minha marca finalmente representa o nível profissional que eu sempre quis transmitir — e isso me permite ter tranquilidade para continuar crescendo."</blockquote>
             <figcaption>
               <span class="depo-author">Nayara Pimentel</span>
-              <span class="depo-role">Diretora Executiva, WL3 Cred · Advogada e Assessora de Investimentos ANCORD</span>
+              <span class="depo-role" data-i18n="depo.nayara.role">Diretora Executiva, WL3 Cred · Advogada e Assessora de Investimentos ANCORD</span>
             </figcaption>
           </figure>
           <figure class="depo-card">
             <span class="depo-q" aria-hidden="true">"</span>
-            <blockquote class="depo-text">"A curiosidade e a vontade de aprender que ela tem realmente me surpreende cada vez mais. A gente foi crescendo juntos — tanto ela quanto o Métier. Recomendo de olhos fechados."</blockquote>
+            <blockquote class="depo-text" data-i18n="depo.chris.text">"A curiosidade e a vontade de aprender que ela tem realmente me surpreende cada vez mais. A gente foi crescendo juntos — tanto ela quanto o Métier. Recomendo de olhos fechados."</blockquote>
             <figcaption>
               <span class="depo-author">Chris Gursching</span>
-              <span class="depo-role">Fundadora, Metiers Café · Rio de Janeiro</span>
+              <span class="depo-role" data-i18n="depo.chris.role">Fundadora, Metiers Café · Rio de Janeiro</span>
             </figcaption>
           </figure>
           <div class="depo-card depo-placeholder">
-            <p class="depo-soon">Em breve</p>
+            <p class="depo-soon" data-i18n="depo.soon">Em breve</p>
             <p class="depo-ph-name">Helem Franceschini</p>
-            <p class="depo-ph-role">CEO, Franceschini Advogados Associados</p>
+            <p class="depo-ph-role" data-i18n="depo.helem.role">CEO, Franceschini Advogados Associados</p>
           </div>
         </div>
       </div>
@@ -634,28 +659,28 @@
     <!-- PALESTRAS -->
     <section id="palestras" class="palestras" aria-labelledby="palestras-title">
       <div class="pal-inner">
-        <p class="s-label">Palestras &amp; Eventos</p>
+        <p class="s-label" data-i18n="pal.label">Palestras &amp; Eventos</p>
         <div class="pal-grid">
           <figure class="pal-photo">
-            <img src="assets/photos/speaking-1.jpg" alt="Andréa Faria palestrando no Join Digital Meet em Joinville" width="800" height="600" class="pal-img" loading="lazy" decoding="async">
-            <figcaption class="pal-cap">Join Digital Meet · Joinville · Brasil</figcaption>
+            <img src="assets/photos/speaking-1.jpg" data-i18n-attr-alt="pal.imgAlt" alt="Andréa Faria palestrando no Join Digital Meet em Joinville" width="800" height="600" class="pal-img" loading="lazy" decoding="async">
+            <figcaption class="pal-cap" data-i18n="pal.cap">Join Digital Meet · Joinville · Brasil</figcaption>
           </figure>
           <div class="pal-text">
-            <h2 id="palestras-title" class="pal-h">Disponível para <em>palestras</em> e eventos.</h2>
-            <p class="pal-p">Para organizadores de eventos, feiras de negócios e empresas que buscam uma perspectiva internacional sobre estratégia de marca, marketing e expansão entre mercados emergentes.</p>
+            <h2 id="palestras-title" class="pal-h" data-i18n-html="pal.h">Disponível para <em>palestras</em> e eventos.</h2>
+            <p class="pal-p" data-i18n="pal.p">Para organizadores de eventos, feiras de negócios e empresas que buscam uma perspectiva internacional sobre estratégia de marca, marketing e expansão entre mercados emergentes.</p>
             <ul class="topics">
-              <li class="topic">Autoridade de marca para líderes e fundadores</li>
-              <li class="topic">Marketing estratégico para expansão internacional</li>
-              <li class="topic">Marcas premium entre culturas</li>
-              <li class="topic">Hospitalidade, marca e experiência do cliente</li>
-              <li class="topic">Brasil e Índia — oportunidades e estratégia</li>
+              <li class="topic" data-i18n="pal.t1">Autoridade de marca para líderes e fundadores</li>
+              <li class="topic" data-i18n="pal.t2">Marketing estratégico para expansão internacional</li>
+              <li class="topic" data-i18n="pal.t3">Marcas premium entre culturas</li>
+              <li class="topic" data-i18n="pal.t4">Hospitalidade, marca e experiência do cliente</li>
+              <li class="topic" data-i18n="pal.t5">Brasil e Índia — oportunidades e estratégia</li>
             </ul>
             <ul class="pal-hl">
-              <li class="pal-hl-row"><span class="pal-hl-dot" aria-hidden="true"></span><span class="pal-hl-text"><strong>Palestrante</strong> — Join Digital Meet, Joinville · Experiência do Consumidor</span></li>
-              <li class="pal-hl-row"><span class="pal-hl-dot" aria-hidden="true"></span><span class="pal-hl-text"><strong>1º lugar</strong> — Desafio Empreender, Instituto Cyrela</span></li>
+              <li class="pal-hl-row"><span class="pal-hl-dot" aria-hidden="true"></span><span class="pal-hl-text" data-i18n-html="pal.hl1"><strong>Palestrante</strong> — Join Digital Meet, Joinville · Experiência do Consumidor</span></li>
+              <li class="pal-hl-row"><span class="pal-hl-dot" aria-hidden="true"></span><span class="pal-hl-text" data-i18n-html="pal.hl2"><strong>1º lugar</strong> — Desafio Empreender, Instituto Cyrela</span></li>
             </ul>
             <div class="pal-cta">
-              <p>Convites para palestras e eventos:</p>
+              <p data-i18n="pal.cta">Convites para palestras e eventos:</p>
               <a href="mailto:andrea@andreafaria.marketing">andrea@andreafaria.marketing</a>
             </div>
           </div>
@@ -667,15 +692,17 @@
   <footer id="contato" class="footer" aria-labelledby="contato-title">
     <div class="footer-content">
       <div class="footer-cta">
-        <h2 id="contato-title">Vamos conversar sobre o próximo passo da sua marca?</h2>
+        <h2 id="contato-title" data-i18n="footer.title">Vamos conversar sobre o próximo passo da sua marca?</h2>
         <a href="https://wa.me/5521972452742?text=Ol%C3%A1%2C%20Andr%C3%A9a%21%20Gostaria%20de%20conversar%20sobre%20dire%C3%A7%C3%A3o%20de%20marketing%20para%20o%20meu%20neg%C3%B3cio."
-          class="btn btn-primary" target="_blank" rel="noopener">
+          class="btn btn-primary" target="_blank" rel="noopener"
+          data-i18n="footer.btn"
+          data-i18n-attr-href="wa.talk.url">
           Fale com a Andréa
         </a>
       </div>
 
-      <nav class="footer-socials" aria-label="Canais de contato">
-        <a href="mailto:andrea@andreafaria.marketing">Email</a>
+      <nav class="footer-socials" data-i18n-attr-aria-label="footer.socialsAria" aria-label="Canais de contato">
+        <a href="mailto:andrea@andreafaria.marketing" data-i18n="footer.email">Email</a>
         <a href="https://www.instagram.com/andreafaria.marketing/" target="_blank" rel="noopener">Instagram</a>
         <a href="https://www.instagram.com/factory.structure/" target="_blank" rel="noopener">Factory</a>
         <a href="https://www.instagram.com/the.light.of.diya/" target="_blank" rel="noopener">The Light of Diya</a>
@@ -684,7 +711,7 @@
 
       <address class="footer-rights">
         <a href="tel:+5521972452742" class="footer-phone">+55 21 97245-2742</a>
-        <p>&copy; 2026 Andréa Faria Marketing Estratégico. <br>Todos os direitos reservados.</p>
+        <p data-i18n-html="footer.rights">&copy; 2026 Andréa Faria Marketing Estratégico. <br>Todos os direitos reservados.</p>
       </address>
     </div>
 
@@ -694,9 +721,9 @@
   </footer>
 
   <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galeria" aria-hidden="true">
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" data-i18n-attr-aria-label="lightbox.aria" aria-label="Galeria" aria-hidden="true">
     <div class="lightbox-inner">
-      <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Fechar galeria">✕</button>
+      <button class="lightbox-close" id="lightbox-close" type="button" data-i18n-attr-aria-label="lightbox.close" aria-label="Fechar galeria">✕</button>
       <div id="lightbox-content"></div>
     </div>
   </div>
