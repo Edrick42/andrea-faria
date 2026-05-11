@@ -1412,7 +1412,14 @@ header {
     left: 0;
     width: 100vw;
     z-index: 1000;
-  }  
+  }
+
+  /* Nav do header desktop fica sobre a hero (fundo branco),
+     então precisa de texto escuro. Mobile menu (.top-bar-bottom)
+     continua com texto branco sobre fundo preto via regra geral. */
+  header nav a {
+    color: var(--preto);
+  }
 
   .logo {
     margin-bottom: 0;
